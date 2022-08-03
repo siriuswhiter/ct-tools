@@ -21,6 +21,8 @@
 | [CT-WASM](#ct-wasm)                     | 2019 | WASM    | Formal      | sound                   |
 | [DATA](#data)                           | 2018 | Binary  | Dynamic     | sound with restrictions |
 | [dudect](#dudect)                       | 2017 | Binary  | Statistical | no                      |
+| [ENCIDER](#encider)                     | 2022 | LLVM    | Symbolic    | sound with restrictions |
+| [ENCoVer](#encover)                     | 2012 | Java    | Formal      | sound                   |
 | [FaCT](#fact)                           | 2019 | DSL     | Formal      | sound                   |
 | [FlowTracker](#flowtracker)             | 2016 | LLVM IR | Formal      | sound                   |
 | [haybale-pitchfork](#haybale-pitchfork) | 2019 | LLVM IR | Symbolic    | sound with restrictions |
@@ -122,6 +124,11 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 - Introduced in “Dude, is my code constant time?” by O. Reparaz, J. Balasch, and I. Verbauwhede; <https://doi.org/10.23919/DATE.2017.7927267>
 - **dudect** is a dynamic tool that uses leakage assessment techniques from physical (power and EM) side-channel analysis, namely test-vector leakage assessment (TVLA). It first runs the target using two classes of secret input data with varying public input data and measures the duration of execution for each run. It then applies a test to the two distributions of the duration of execution for the two classes (either Welch's t-test for equality of means or Kolmogorov-Smirnov test for equality of distributions), and if the distributions differ, leakage is reported. This is analogous to how leakage assessment is used in power side-channel attacks, in that instead of comparing distributions of power consumption at points during the execution of the target, the runtime distributions are compared.
 - **Tool available:** <https://github.com/oreparaz/dudect> ![GitHub last commit](https://img.shields.io/github/last-commit/oreparaz/dudect) ![GitHub contributors](https://img.shields.io/github/contributors/oreparaz/dudect)![GitHub Repo stars](https://img.shields.io/github/stars/oreparaz/dudect)
+
+### ENCIDER
+
+- Introduced in “ENCIDER: Detecting Timing and Cache Side Channels in SGX Enclaves and Cryptographic APIs” by Tuba Yavuz, Farhaan Fowze, Grant Hernandez, Ken Yihang Bai, Kevin Butler, and Dave Jing Tian; <https://ieeexplore.ieee.org/abstract/document/9737388>
+- **Tool not yet available:** <https://github.com/sysrel/ENCIDER>
 
 ### ENCoVer
 
