@@ -7,7 +7,7 @@
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
 | [ABPV13](#abpv13)                       | 2013 | C       | Formal      | sound                   |
-[ [ANABLEPS](#anableps)                   | 2019 | Binary  | Dynamic     | no                      |
+| [ANABLEPS](#anableps)                   | 2019 | Binary  | Dynamic     | no                      |
 | [Binsec/Rel](#binsecrel)                | 2020 | Binary  | Symbolic    | sound with restrictions |
 | [Blazer](#blazer)                       | 2017 | Java    | Formal      | sound                   |
 | [BPT17](#bpt17)                         | 2017 | C       | Symbolic    | sound with restrictions |
