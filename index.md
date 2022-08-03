@@ -12,6 +12,7 @@
 | [BPT17](#bpt17)                         | 2017 | C       | Symbolic    | sound with restrictions |
 | [CacheAudit](#cacheaudit)               | 2013 | Binary  | Formal      | other                   |
 | [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
+| [CacheS](#caches)                       | 2019 | Binary  | Formal      | sound with restrictions |
 | [CacheFix](#cachefix)                   | 2018 |         |             |                         |
 | [COCO-CHANNEL](#coco-channel)           | 2018 | Java    | Symbolic    | sound                   |
 | [Constantine](#constantine)             | 2021 |         |             |                         |
@@ -71,6 +72,11 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### CacheD
 
 - Introduced in “Cached: Identifying cache-based timing channels in production software” by S. Wang, P. Wang, X. Liu, D. Zhang, and D. Wu; <https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/wang-shuai>
+- **Tool not available**
+
+### CacheS
+
+- Introduced in “Identifying cache-based side channels through secret-augmented abstract interpretation” by S. Wang, Y. Bao, X. Liu, P. Wang, D. Zhang, and D. Wu; <https://www.usenix.org/conference/usenixsecurity19/presentation/wang-shuai>
 - **Tool not available**
 
 ### CacheFix
