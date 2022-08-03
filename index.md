@@ -7,6 +7,7 @@
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
 | [ABPV13](#abpv13)                       | 2013 | C       | Formal      | sound                   |
+[ [ANABLEPS](#anableps)                   | 2019 | Binary  | Dynamic     | no                      |
 | [Binsec/Rel](#binsecrel)                | 2020 | Binary  | Symbolic    | sound with restrictions |
 | [Blazer](#blazer)                       | 2017 | Java    | Formal      | sound                   |
 | [BPT17](#bpt17)                         | 2017 | C       | Symbolic    | sound with restrictions |
@@ -46,10 +47,15 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 - Introduced in “Formal verification of side-channel countermeasures using self-composition” by J. B. Almeida, M. Barbosa, J. S. Pinto, and B. Vieira; <https://doi.org/10.1016/j.scico.2011.10.008>
 - **Tool not available**
 
+### ANABLEPS
+
+ - Introduced in “Time and Order: Towards Automatically Identifying Side-Channel Vulnerabilities in Enclave Binaries” by W. Wang, Y. Zhang, and Z. Lin; <https://www.usenix.org/conference/raid2019/presentation/wang-wubing>
+ - **Tool available:** <https://github.com/OSUSecLab/ANABLEPS>![GitHub last commit](https://img.shields.io/github/last-commit/OSUSecLab/ANABLEPS) ![GitHub contributors](https://img.shields.io/github/contributors/OSUSecLab/ANABLEPS)![GitHub Repo stars](https://img.shields.io/github/stars/OSUSecLab/ANABLEPS)
+
 ### Binsec/Rel
 
 - Introduced in “Binsec/rel: Efficient relational symbolic execution for constant-time at binary-level” by L. Daniel, S. Bardin, and T. Rezk; <https://doi.org/10.1109/SP40000.2020.00074>
-- **Tool available:** <https://github.com/binsec/Rel> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/Rel) ![GitHub contributors](https://img.shields.io/github/contributors/binsec/Rel)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/Rel)
+- **Tool available:** <https://github.com/binsec/Rel> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/Rel)![GitHub contributors](https://img.shields.io/github/contributors/binsec/Rel)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/Rel)
 - **Tests available:** <https://github.com/binsec/rel_bench> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/rel_bench)![GitHub contributors](https://img.shields.io/github/contributors/binsec/rel_bench)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/rel_bench)
 - **Binsec/Rel** is a static analysis tool that works on the binary level, thereby overcoming issues of compilers inserting non-constant-time code or turning constant-time code into non-constant-time one.
 
@@ -66,7 +72,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### CacheAudit
 
 - Introduced in “CacheAudit: A tool for the static analysis of cache side channels” by G. Doychev, D. Feld, B. Köpf, L. Mauborgne, and J. Reineke; <https://www.usenix.org/conference/usenixsecurity13/technical-sessions/paper/doychev>
-- **Tool available:** <https://github.com/cacheaudit/cacheaudit>  ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit) ![GitHub contributors](https://img.shields.io/github/contributors/cacheaudit/cacheaudit)![GitHub Repo stars](https://img.shields.io/github/stars/cacheaudit/cacheaudit)
+- **Tool available:** <https://github.com/cacheaudit/cacheaudit> ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/cacheaudit/cacheaudit)![GitHub Repo stars](https://img.shields.io/github/stars/cacheaudit/cacheaudit)
 - **Website:**  <https://software.imdea.org/projects/cacheaudit/>
 
 ### CacheD
@@ -92,7 +98,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### Constantine
 
 - Introduced in “Constantine: Automatic side-channel resistance using efficient control and data flow linearization” by P. Borrello, D. C. D’Elia, L. Querzoni, and C. Giuffrida; <https://arxiv.org/abs/2104.10749>
-- **Tool available:** <https://github.com/pietroborrello/constantine>  ![GitHub last commit](https://img.shields.io/github/last-commit/pietroborrello/constantine) ![GitHub contributors](https://img.shields.io/github/contributors/pietroborrello/constantine)![GitHub Repo stars](https://img.shields.io/github/stars/pietroborrello/constantine)
+- **Tool available:** <https://github.com/pietroborrello/constantine>  ![GitHub last commit](https://img.shields.io/github/last-commit/pietroborrello/constantine)![GitHub contributors](https://img.shields.io/github/contributors/pietroborrello/constantine)![GitHub Repo stars](https://img.shields.io/github/stars/pietroborrello/constantine)
 
 ### ctgrind
 
@@ -104,32 +110,32 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “ct-fuzz: Fuzzing for timing leaks” by S. He, M. Emmi, and G. F. Ciocarlie; <https://doi.org/10.1109/ICST46399.2020.00063>
 - **ct-fuzz** takes inspiration from **ct-verif** in its method but diverges significantly. It first constructs a product program using self-composition of the target with itself, where it asserts that at each point that the memory address accessed by the two programs, whether through control from or indexing, is the same. It then uses a fuzzer against this product program, which splits its fuzzing input equally into the secret inputs for the two instances or the original program in the product program. If the fuzzer detects a failed assert, leakage is detected, as it found two runs through the target, which differ only in secret inputs yet access different offsets in memory.
-- **Tool available:** <https://github.com/michael-emmi/ct-fuzz>  ![GitHub last commit](https://img.shields.io/github/last-commit/michael-emmi/ct-fuzz) ![GitHub contributors](https://img.shields.io/github/contributors/michael-emmi/ct-fuzz)![GitHub Repo stars](https://img.shields.io/github/stars/michael-emmi/ct-fuzz)
+- **Tool available:** <https://github.com/michael-emmi/ct-fuzz>  ![GitHub last commit](https://img.shields.io/github/last-commit/michael-emmi/ct-fuzz)![GitHub contributors](https://img.shields.io/github/contributors/michael-emmi/ct-fuzz)![GitHub Repo stars](https://img.shields.io/github/stars/michael-emmi/ct-fuzz)
 
 ### ct-verif
 
 - Introduced in “Verifying Constant-Time Implementations” by J. B. Almeida, M. Barbosa, G. Barthe, F. Dupressoir and M. Emmi; <https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_almeida.pdf>
 - The **ct-verif** tool is a static analysis tool verifying constant-time properties of code, working on the level of LLVM IR, with source code annotations. It uses the [SMACK](http://smackers.github.io/) modular software verification toolchain, [Bam-Bam-Boogieman](https://github.com/michael-emmi/bam-bam-boogieman) for Boogie source transformation, [Boogie](https://github.com/boogie-org/boogie) intermediate verification language as well as the [Corral](https://github.com/boogie-org/corral) and [Z3](https://github.com/Z3Prover/z3) solvers. 
 - The tool is actively deployed in the CI of Amazon's **s2n** library at [link](https://github.com/awslabs/s2n/tree/main/tests/ctverif). However, even there, it is only used to verify two functions that together have less than 100 lines of code.
-- **Tool available:** <https://github.com/imdea-software/verifying-constant-time> ![GitHub last commit](https://img.shields.io/github/last-commit/imdea-software/verifying-constant-time) ![GitHub contributors](https://img.shields.io/github/contributors/imdea-software/verifying-constant-time)![GitHub Repo stars](https://img.shields.io/github/stars/imdea-software/verifying-constant-time)
+- **Tool available:** <https://github.com/imdea-software/verifying-constant-time> ![GitHub last commit](https://img.shields.io/github/last-commit/imdea-software/verifying-constant-time)![GitHub contributors](https://img.shields.io/github/contributors/imdea-software/verifying-constant-time)![GitHub Repo stars](https://img.shields.io/github/stars/imdea-software/verifying-constant-time)
 
 ### CT-WASM
 
 - Introduced in “CT-WASM: type-driven secure cryptography for the web ecosystem” by C. Watt, J. Renner, N. Popescu, S. Cauligi, and D. Stefan; <https://doi.org/10.1145/3290390>
-- **Tool available:** <https://github.com/PLSysSec/ct-wasm> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/ct-wasm) ![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/ct-wasm)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/ct-wasm)
+- **Tool available:** <https://github.com/PLSysSec/ct-wasm> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/ct-wasm)![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/ct-wasm)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/ct-wasm)
 
 ### DATA
 
 - Introduced in “DATA - differential address trace analysis: Finding address-based side-channels in binaries” by S. Weiser, A. Zankl, R. Spreitzer, K. Miller, S. Mangard, and G. Sigl; <https://www.usenix.org/conference/usenixsecurity18/presentation/weise>
 - Used in “Big numbers - big troubles: Systematically analyzing nonce leakage in (EC)DSA implementations” by S. Weiser, D. Schrammel, L. Bodner, and R. Spreitzer; <https://www.usenix.org/conference/usenixsecurity20/presentation/weiser>
 - **DATA** (Differential Address Trace Analysis) is a tool quite similar to the **Microwalk** framework in that it is a dynamic tool that records memory-accesses of the target into address traces as it processes random secret inputs. The traces are then aligned and analyzed using generic and specific leakage tests. The tool reports the location of leakage and even offers a graphical user interface for analysis.
-- **Tool available:** <https://github.com/Fraunhofer-AISEC/DATA> ![GitHub last commit](https://img.shields.io/github/last-commit/Fraunhofer-AISEC/DATA) ![GitHub contributors](https://img.shields.io/github/contributors/Fraunhofer-AISEC/DATA)![GitHub Repo stars](https://img.shields.io/github/stars/Fraunhofer-AISEC/DATA)
+- **Tool available:** <https://github.com/Fraunhofer-AISEC/DATA> ![GitHub last commit](https://img.shields.io/github/last-commit/Fraunhofer-AISEC/DATA)![GitHub contributors](https://img.shields.io/github/contributors/Fraunhofer-AISEC/DATA)![GitHub Repo stars](https://img.shields.io/github/stars/Fraunhofer-AISEC/DATA)
 
 ### dudect
 
 - Introduced in “Dude, is my code constant time?” by O. Reparaz, J. Balasch, and I. Verbauwhede; <https://doi.org/10.23919/DATE.2017.7927267>
 - **dudect** is a dynamic tool that uses leakage assessment techniques from physical (power and EM) side-channel analysis, namely test-vector leakage assessment (TVLA). It first runs the target using two classes of secret input data with varying public input data and measures the duration of execution for each run. It then applies a test to the two distributions of the duration of execution for the two classes (either Welch's t-test for equality of means or Kolmogorov-Smirnov test for equality of distributions), and if the distributions differ, leakage is reported. This is analogous to how leakage assessment is used in power side-channel attacks, in that instead of comparing distributions of power consumption at points during the execution of the target, the runtime distributions are compared.
-- **Tool available:** <https://github.com/oreparaz/dudect> ![GitHub last commit](https://img.shields.io/github/last-commit/oreparaz/dudect) ![GitHub contributors](https://img.shields.io/github/contributors/oreparaz/dudect)![GitHub Repo stars](https://img.shields.io/github/stars/oreparaz/dudect)
+- **Tool available:** <https://github.com/oreparaz/dudect> ![GitHub last commit](https://img.shields.io/github/last-commit/oreparaz/dudect)![GitHub contributors](https://img.shields.io/github/contributors/oreparaz/dudect)![GitHub Repo stars](https://img.shields.io/github/stars/oreparaz/dudect)
 
 ### ENCIDER
 
@@ -146,7 +152,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 - Introduced in “FaCT: a DSL for timing-sensitive computation” by S. Cauligi, G. Soeller, B. Johannesmeyer, F. Brown, R. S. Wahby,
   J. Renner, B. Grégoire, G. Barthe, R. Jhala, and D. Stefan; <https://doi.org/10.1145/3314221.3314605>
 - The **FaCT** tool is less of a tool for analysis of implementations for timing leakage and more of a domain-specific language for writing constant-time implementations that automatically removes leakage during compilation. The language is C-like, compiles into LLVM IR, and offers the `secret` keyword, which is used to mark certain variables as secret, which then triggers the compiler to generate constant-time code with regards to their values.
-- **Tool available:** <https://github.com/plsyssec/fact> ![GitHub last commit](https://img.shields.io/github/last-commit/plsyssec/fact) ![GitHub contributors](https://img.shields.io/github/contributors/plsyssec/fact)![GitHub Repo stars](https://img.shields.io/github/stars/plsyssec/fact)
+- **Tool available:** <https://github.com/plsyssec/fact> ![GitHub last commit](https://img.shields.io/github/last-commit/plsyssec/fact)![GitHub contributors](https://img.shields.io/github/contributors/plsyssec/fact)![GitHub Repo stars](https://img.shields.io/github/stars/plsyssec/fact)
 
 ### FlowTracker
 
@@ -157,7 +163,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### haybale-pitchfork
 
 - Introduced in <https://github.com/PLSysSec/haybale-pitchfork>
-- **Tool available:** <https://github.com/PLSysSec/haybale-pitchfork> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/haybale-pitchfork) ![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/haybale-pitchfork)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/haybale-pitchfork)
+- **Tool available:** <https://github.com/PLSysSec/haybale-pitchfork> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/haybale-pitchfork)![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/haybale-pitchfork)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/haybale-pitchfork)
 
 ### KMO12
 
@@ -173,12 +179,12 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “Microwalk: A framework for finding side channels in binaries” by J. Wichelmann, A. Moghimi, T. Eisenbarth, and B. Sunar; <https://doi.org/10.1145/3274694.3274741>
 - The **MicroWalk** framework is a dynamic tool that uses Dynamic Binary Instrumentation (DBI) and Mutual Information Analysis (MIA). As a dynamic tool, it runs the target with random inputs and uses dynamic binary instrumentation to log events such as memory allocations, branches, calls, returns, memory reads/writes as well as stack operations into an execution trace. It then processes these traces by applying the chosen leakage model, i.e., in the branching model, it only keeps the control flow events in the execution traces. After collection of traces, it offers several analysis options, either directly comparing the traces or using mutual information analysis either on the whole trace or a specific offset in the execution traces (a specific instruction).
-- **Tool available:** <https://github.com/UzL-ITS/Microwalk> ![GitHub last commit](https://img.shields.io/github/last-commit/UzL-ITS/Microwalk) ![GitHub contributors](https://img.shields.io/github/contributors/UzL-ITS/Microwalk)![GitHub Repo stars](https://img.shields.io/github/stars/UzL-ITS/Microwalk)
+- **Tool available:** <https://github.com/UzL-ITS/Microwalk> ![GitHub last commit](https://img.shields.io/github/last-commit/UzL-ITS/Microwalk)![GitHub contributors](https://img.shields.io/github/contributors/UzL-ITS/Microwalk)![GitHub Repo stars](https://img.shields.io/github/stars/UzL-ITS/Microwalk)
 
 ### pitchfork-angr
 
 - Introduced in <https://github.com/PLSysSec/pitchfork-angr>
-- **Tool available:** <https://github.com/PLSysSec/pitchfork-angr> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/pitchfork-angr) ![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/pitchfork-angr)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/pitchfork-angr)
+- **Tool available:** <https://github.com/PLSysSec/pitchfork-angr> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/pitchfork-angr)![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/pitchfork-angr)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/pitchfork-angr)
 
 ### SC-Eliminator
 
