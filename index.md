@@ -15,6 +15,7 @@
 | [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
 | [CacheS](#caches)                       | 2019 | Binary  | Formal      | sound with restrictions |
 | [CacheFix](#cachefix)                   | 2018 |         |             |                         |
+| [CaType](#catype)                       | 2022 | Binary  | Formal      | sound                   |
 | [COCO-CHANNEL](#coco-channel)           | 2018 | Java    | Symbolic    | sound                   |
 | [Constantine](#constantine)             | 2021 |         |             |                         |
 | [ctgrind](#ctgrind)                     | 2010 | Binary  | Dynamic     | sound with restrictions |
@@ -39,6 +40,7 @@
 | [tis-ct](#tis-ct)                       | -    | C       | Symbolic    | sound with restrictions |
 | [TriggerFlow](#triggerflow)             | 2018 |         |             |                         |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
+| --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
 
 This table is based mostly on the work in [*“They’re not that hard to mitigate”: What Cryptographic Library Developers Think About Timing Attacks*](https://crocs.fi.muni.cz/public/papers/usablect_sp22) with manual addition of more tools. 
 
@@ -89,6 +91,10 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “Symbolic verification of cache side-channel freedom” by S. Chattopadhyay and A. Roychoudhury; <https://doi.org/10.1109/TCAD.2018.2858402>
 - **Tool available:** <https://bitbucket.org/sudiptac/cachefix/src/master/> ![](https://img.shields.io/badge/last%20commit-may%202018-red)
+
+### CaType
+- Introduced in “Cache Refinement Type for Side-Channel Detection of Cryptographic Software” by K. Jiang, Y. Bao, S. Wang, Z. Liu, and T. Zhang; <https://arxiv.org/abs/2209.04610v2>
+- **Tool not available**
 
 ### COCO-CHANNEL
 
