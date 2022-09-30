@@ -37,6 +37,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [FlowTracker](#flowtracker)             | 2016 | LLVM IR | Formal      | sound                   |
 | [haybale-pitchfork](#haybale-pitchfork) | 2019 | LLVM IR | Symbolic    | sound with restrictions |
 | [KMO12](#kmo12)                         | 2012 | Binary  | Formal      | other                   |
+| [Manifold](#manifold)                   | 2022 |         |             |                         |
 | [MemSan](#memsan)                       | -    | LLVM IR | Dynamic     | sound with restrictions |
 | [MicroWalk](#microwalk)                 | 2018 | Binary  | Dynamic     | sound with restrictions |
 | [pitchfork-angr](#pitchfork-angr)       | 2019 |         |             |                         |
@@ -47,7 +48,6 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [tis-ct](#tis-ct)                       | -    | C       | Symbolic    | sound with restrictions |
 | [TriggerFlow](#triggerflow)             | 2018 |         |             |                         |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
-| --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
 
 This table is based mostly on the work in [*“They’re not that hard to mitigate”: What Cryptographic Library Developers Think About Timing Attacks*](https://crocs.fi.muni.cz/public/papers/usablect_sp22) with manual addition of more tools. 
 
@@ -204,6 +204,11 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “Automatic quantification of cache side-channels” by B. Köpf, L. Mauborgne, and M. Ochoa; <https://doi.org/10.1007/978-3-642-31424-7_40>
 - **Tool not available, superseded by [CacheAudit](#cacheaudit)**
+
+### Manifold
+
+- Introduced in “Automated side channel analysis of media software with manifold learning” by Y. Yuan, Q. Pang, and S. Wang; <https://www.usenix.org/conference/usenixsecurity22/presentation/yuan-yuanyuan>
+- **Tool available:** <https://zenodo.org/record/5816702#.YdQMHxNByjA>
 
 ### MemSan
 
