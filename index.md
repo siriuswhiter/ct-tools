@@ -12,6 +12,7 @@
 | [Blazer](#blazer)                       | 2017 | Java    | Formal      | sound                   |
 | [BPT17](#bpt17)                         | 2017 | C       | Symbolic    | sound with restrictions |
 | [CacheAudit](#cacheaudit)               | 2013 | Binary  | Formal      | other                   |
+| [CacheQL](#cacheql)                     | 2022 | Binary  | Dynamic     | sound with restrictions |
 | [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
 | [CacheS](#caches)                       | 2019 | Binary  | Formal      | sound with restrictions |
 | [CacheFix](#cachefix)                   | 2018 |         |             |                         |
@@ -77,6 +78,10 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 - Introduced in “CacheAudit: A tool for the static analysis of cache side channels” by G. Doychev, D. Feld, B. Köpf, L. Mauborgne, and J. Reineke; <https://www.usenix.org/conference/usenixsecurity13/technical-sessions/paper/doychev>
 - **Tool available:** <https://github.com/cacheaudit/cacheaudit> ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/cacheaudit/cacheaudit)![GitHub Repo stars](https://img.shields.io/github/stars/cacheaudit/cacheaudit)
 - **Website:**  <https://software.imdea.org/projects/cacheaudit/>
+
+### CacheQL
+- Introduced in “CacheQL: Quantifying and Localizing Cache Side-Channel Vulnerabilities in Production Software” by Y. Yuan, Z. Liu, and S. Wang; <https://arxiv.org/abs/2209.14952>
+- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL>  ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
 
 ### CacheD
 
