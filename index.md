@@ -21,6 +21,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [CacheFix](#cachefix)                   | 2018 |         |             |                         |
 | [CaSym](#casym)                         | 2019 | LLVM IR | Symbolic    | sound                   |
 | [CaType](#catype)                       | 2022 | Binary  | Formal      | sound                   |
+| [CHALICE](#chalice)                     | 2019 |         |             |                         |
 | [COCO-CHANNEL](#coco-channel)           | 2018 | Java    | Symbolic    | sound                   |
 | [Constantine](#constantine)             | 2021 |         |             |                         |
 | [ctgrind](#ctgrind)                     | 2010 | Binary  | Dynamic     | sound with restrictions |
@@ -108,6 +109,11 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### CaSym
 - Introduced in “CaSym: Cache Aware Symbolic Execution for Side Channel Detection and Mitigation” by R. Brotzman, S. Liu, D. Zhang, G. Tan, M. Kandemir; <https://doi.org/10.1109/SP.2019.00022>
 - **Tool not available**
+
+### CHALICE
+
+- Introduced in “Quantifying the Information Leakage in Cache Attacks via Symbolic Execution” by S. Chattopadhyay,  M. Beck, A. Rezine, and A. Zeller; <https://dl.acm.org/doi/10.1145/3288758>
+- **Tool available:** <https://bitbucket.org/sudiptac/chalice>
 
 ### CaType
 - Introduced in “Cache Refinement Type for Side-Channel Detection of Cryptographic Software” by K. Jiang, Y. Bao, S. Wang, Z. Liu, and T. Zhang; <https://arxiv.org/abs/2209.04610v2>
