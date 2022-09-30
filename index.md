@@ -145,7 +145,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### ENCoVer
 
 - Introduced in “ENCoVer: Symbolic exploration for information flow security” by M. Balliu, M. Dam, and G. L. Guernic; <https://doi.org/10.1109/CSF.2012.24>
-- **Tool not available:**  <http://www.nada.kth.se/~musard/encover>
+- **Tool available:**  <https://people.kth.se/~musard/files/encover.html>
 
 ### FaCT
 
