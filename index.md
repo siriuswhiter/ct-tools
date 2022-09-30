@@ -8,6 +8,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
+| [Abacus](#abacus)                       | 2021 | Binary  | Dynamic     | sound with restrictions |
 | [ABPV13](#abpv13)                       | 2013 | C       | Formal      | sound                   |
 | [ANABLEPS](#anableps)                   | 2019 | Binary  | Dynamic     | no                      |
 | [Binsec/Rel](#binsecrel)                | 2020 | Binary  | Symbolic    | sound with restrictions |
@@ -48,6 +49,10 @@ This page lists tools for testing and verification of constant-timeness of progr
 
 This table is based mostly on the work in [*“They’re not that hard to mitigate”: What Cryptographic Library Developers Think About Timing Attacks*](https://crocs.fi.muni.cz/public/papers/usablect_sp22) with manual addition of more tools. 
 
+### Abacus
+- Introduced in “Abacus: A Tool for Precise Side-Channel Analysis” by Q. Bao, Z. Wang, J. R. Larus, and D. Wu; <https://doi.org/10.1109/ICSE-Companion52605.2021.00110>
+- **Tool available:** <https://github.com/s3team/Abacus> ![GitHub last commit](https://img.shields.io/github/last-commit/s3team/Abacus)![GitHub contributors](https://img.shields.io/github/contributors/s3team/Abacus)![GitHub Repo stars](https://img.shields.io/github/stars/s3team/Abacus)
+
 ### ABPV13
 
 - Introduced in “Formal verification of side-channel countermeasures using self-composition” by J. B. Almeida, M. Barbosa, J. S. Pinto, and B. Vieira; <https://doi.org/10.1016/j.scico.2011.10.008>
@@ -56,7 +61,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### ANABLEPS
 
  - Introduced in “Time and Order: Towards Automatically Identifying Side-Channel Vulnerabilities in Enclave Binaries” by W. Wang, Y. Zhang, and Z. Lin; <https://www.usenix.org/conference/raid2019/presentation/wang-wubing>
- - **Tool available:** <https://github.com/OSUSecLab/ANABLEPS>![GitHub last commit](https://img.shields.io/github/last-commit/OSUSecLab/ANABLEPS) ![GitHub contributors](https://img.shields.io/github/contributors/OSUSecLab/ANABLEPS)![GitHub Repo stars](https://img.shields.io/github/stars/OSUSecLab/ANABLEPS)
+ - **Tool available:** <https://github.com/OSUSecLab/ANABLEPS> ![GitHub last commit](https://img.shields.io/github/last-commit/OSUSecLab/ANABLEPS) ![GitHub contributors](https://img.shields.io/github/contributors/OSUSecLab/ANABLEPS)![GitHub Repo stars](https://img.shields.io/github/stars/OSUSecLab/ANABLEPS)
 
 ### Binsec/Rel
 
@@ -83,7 +88,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 ### CacheQL
 - Introduced in “CacheQL: Quantifying and Localizing Cache Side-Channel Vulnerabilities in Production Software” by Y. Yuan, Z. Liu, and S. Wang; <https://arxiv.org/abs/2209.14952>
-- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL>  ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
+- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL> ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
 
 ### CacheD
 
@@ -116,7 +121,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### Constantine
 
 - Introduced in “Constantine: Automatic side-channel resistance using efficient control and data flow linearization” by P. Borrello, D. C. D’Elia, L. Querzoni, and C. Giuffrida; <https://arxiv.org/abs/2104.10749>
-- **Tool available:** <https://github.com/pietroborrello/constantine>  ![GitHub last commit](https://img.shields.io/github/last-commit/pietroborrello/constantine)![GitHub contributors](https://img.shields.io/github/contributors/pietroborrello/constantine)![GitHub Repo stars](https://img.shields.io/github/stars/pietroborrello/constantine)
+- **Tool available:** <https://github.com/pietroborrello/constantine> ![GitHub last commit](https://img.shields.io/github/last-commit/pietroborrello/constantine)![GitHub contributors](https://img.shields.io/github/contributors/pietroborrello/constantine)![GitHub Repo stars](https://img.shields.io/github/stars/pietroborrello/constantine)
 
 ### ctgrind
 
@@ -128,7 +133,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “ct-fuzz: Fuzzing for timing leaks” by S. He, M. Emmi, and G. F. Ciocarlie; <https://doi.org/10.1109/ICST46399.2020.00063>
 - **ct-fuzz** takes inspiration from **ct-verif** in its method but diverges significantly. It first constructs a product program using self-composition of the target with itself, where it asserts that at each point that the memory address accessed by the two programs, whether through control from or indexing, is the same. It then uses a fuzzer against this product program, which splits its fuzzing input equally into the secret inputs for the two instances or the original program in the product program. If the fuzzer detects a failed assert, leakage is detected, as it found two runs through the target, which differ only in secret inputs yet access different offsets in memory.
-- **Tool available:** <https://github.com/michael-emmi/ct-fuzz>  ![GitHub last commit](https://img.shields.io/github/last-commit/michael-emmi/ct-fuzz)![GitHub contributors](https://img.shields.io/github/contributors/michael-emmi/ct-fuzz)![GitHub Repo stars](https://img.shields.io/github/stars/michael-emmi/ct-fuzz)
+- **Tool available:** <https://github.com/michael-emmi/ct-fuzz> ![GitHub last commit](https://img.shields.io/github/last-commit/michael-emmi/ct-fuzz)![GitHub contributors](https://img.shields.io/github/contributors/michael-emmi/ct-fuzz)![GitHub Repo stars](https://img.shields.io/github/stars/michael-emmi/ct-fuzz)
 
 ### ct-verif
 
