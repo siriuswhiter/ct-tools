@@ -1,6 +1,8 @@
 ## Constant-timeness verification tools
 
- This page lists tools for testing and verification of constant-timeness of programs.
+This page lists tools for testing and verification of constant-timeness of programs.
+
+![Oprah giving everyone a tool](/assets/img/oprah.jpg)
 
 ## Tools
 
