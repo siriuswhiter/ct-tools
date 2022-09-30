@@ -15,6 +15,7 @@
 | [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
 | [CacheS](#caches)                       | 2019 | Binary  | Formal      | sound with restrictions |
 | [CacheFix](#cachefix)                   | 2018 |         |             |                         |
+| [CaSym](#casym)                         | 2019 | LLVM IR | Symbolic    | sound                   |
 | [CaType](#catype)                       | 2022 | Binary  | Formal      | sound                   |
 | [COCO-CHANNEL](#coco-channel)           | 2018 | Java    | Symbolic    | sound                   |
 | [Constantine](#constantine)             | 2021 |         |             |                         |
@@ -91,6 +92,10 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “Symbolic verification of cache side-channel freedom” by S. Chattopadhyay and A. Roychoudhury; <https://doi.org/10.1109/TCAD.2018.2858402>
 - **Tool available:** <https://bitbucket.org/sudiptac/cachefix/src/master/> ![](https://img.shields.io/badge/last%20commit-may%202018-red)
+
+### CaSym
+- Introduced in “CaSym: Cache Aware Symbolic Execution for Side Channel Detection and Mitigation” by R. Brotzman, S. Liu, D. Zhang, G. Tan, M. Kandemir; <https://doi.org/10.1109/SP.2019.00022>
+- **Tool not available**
 
 ### CaType
 - Introduced in “Cache Refinement Type for Side-Channel Detection of Cryptographic Software” by K. Jiang, Y. Bao, S. Wang, Z. Liu, and T. Zhang; <https://arxiv.org/abs/2209.04610v2>
