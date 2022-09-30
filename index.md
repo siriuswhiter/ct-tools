@@ -19,6 +19,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
 | [CacheS](#caches)                       | 2019 | Binary  | Formal      | sound with restrictions |
 | [CacheFix](#cachefix)                   | 2018 |         |             |                         |
+| [CANAL](#canal)                         | 2018 | LLVM IR | Formal      |                         |
 | [CaSym](#casym)                         | 2019 | LLVM IR | Symbolic    | sound                   |
 | [CaType](#catype)                       | 2022 | Binary  | Formal      | sound                   |
 | [CHALICE](#chalice)                     | 2019 |         |             |                         |
@@ -89,7 +90,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 ### CacheQL
 - Introduced in “CacheQL: Quantifying and Localizing Cache Side-Channel Vulnerabilities in Production Software” by Y. Yuan, Z. Liu, and S. Wang; <https://arxiv.org/abs/2209.14952>
-- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL> ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
+- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL> ![GitHub last commit](https://img.shields.io/github/last-commit/Yuanyuan-Yuan/CacheQL)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
 
 ### CacheD
 
@@ -105,6 +106,11 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “Symbolic verification of cache side-channel freedom” by S. Chattopadhyay and A. Roychoudhury; <https://doi.org/10.1109/TCAD.2018.2858402>
 - **Tool available:** <https://bitbucket.org/sudiptac/cachefix/src/master/> ![](https://img.shields.io/badge/last%20commit-may%202018-red)
+
+### CANAL
+
+- Introduced in “CANAL: a cache timing analysis framework via LLVM transformation” by C. Sung, B. Paulsen, and C. Wang; <https://dl.acm.org/doi/10.1145/3238147.3240485>
+- **Tool available:** <https://github.com/canalcache/canal> ![GitHub last commit](https://img.shields.io/github/last-commit/canalcache/canal)![GitHub contributors](https://img.shields.io/github/contributors/canalcache/canal)![GitHub Repo stars](https://img.shields.io/github/stars/canalcache/canal)
 
 ### CaSym
 - Introduced in “CaSym: Cache Aware Symbolic Execution for Side Channel Detection and Mitigation” by R. Brotzman, S. Liu, D. Zhang, G. Tan, M. Kandemir; <https://doi.org/10.1109/SP.2019.00022>
