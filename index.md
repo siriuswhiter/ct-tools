@@ -46,6 +46,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [Themis](#themis)                       | 2017 | Java    | Formal      | sound                   |
 | [timecop](#timecop)                     | -    | Binary  | Dynamic     | sound with restrictions |
 | [tis-ct](#tis-ct)                       | -    | C       | Symbolic    | sound with restrictions |
+| [tlsfuzzer](#tlsfuzzer)                 | 2023 | Binary/Network | Statistical | other                   |
 | [TriggerFlow](#triggerflow)             | 2018 |         |             |                         |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
 
@@ -253,6 +254,13 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - <http://web.archive.org/web/20200810074547/http://trust-in-soft.com/tis-ct/>
 - **Tool not available**
+
+### tlsfuzzer
+
+- Introduced in “Everlasting ROBOT: The Marvin Attack” by H. Kario; <https://eprint.iacr.org/2023/1442>; and in “Out of the Box Testing” by H. Kario; <https://eprint.iacr.org/2023/1441>
+- The tool is a generic TLS test suite with the timing verification as one of the features.
+- The tool is unique in that it allows measuring even very small differences (in the sub nanosecond range) over the network, allowing complete black-box testing of implementations. While it does use statistical tests for determining if the side channel is present (sign test, Wilcoxon signed-rank test, and Friedman test), it does combine them with the bootstrapping of the confidence intervals of pairwise differences: providing easy to understand upper bounds of the possible side-channel leakage.
+- **Tool available:** <https://github.com/tlsfuzzer/tlsfuzzer> ![GitHub last commit](https://img.shields.io/github/last-commit/tlsfuzzer/tlsfuzzer)![GitHub contributors](https://img.shields.io/github/contributors/tlsfuzzer/tlsfuzzer)![GitHub Repo stars](https://img.shields.io/github/stars/tlsfuzzer/tlsfuzzer)
 
 ### TriggerFlow
 
