@@ -162,7 +162,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 ### DATA
 
-- Introduced in “DATA - differential address trace analysis: Finding address-based side-channels in binaries” by S. Weiser, A. Zankl, R. Spreitzer, K. Miller, S. Mangard, and G. Sigl; <https://www.usenix.org/conference/usenixsecurity18/presentation/weise>
+- Introduced in “DATA - differential address trace analysis: Finding address-based side-channels in binaries” by S. Weiser, A. Zankl, R. Spreitzer, K. Miller, S. Mangard, and G. Sigl; <https://www.usenix.org/conference/usenixsecurity18/presentation/weiser>
 - Used in “Big numbers - big troubles: Systematically analyzing nonce leakage in (EC)DSA implementations” by S. Weiser, D. Schrammel, L. Bodner, and R. Spreitzer; <https://www.usenix.org/conference/usenixsecurity20/presentation/weiser>
 - **DATA** (Differential Address Trace Analysis) is a tool quite similar to the **Microwalk** framework in that it is a dynamic tool that records memory-accesses of the target into address traces as it processes random secret inputs. The traces are then aligned and analyzed using generic and specific leakage tests. The tool reports the location of leakage and even offers a graphical user interface for analysis.
 - **Tool available:** <https://github.com/Fraunhofer-AISEC/DATA> ![GitHub last commit](https://img.shields.io/github/last-commit/Fraunhofer-AISEC/DATA)![GitHub contributors](https://img.shields.io/github/contributors/Fraunhofer-AISEC/DATA)![GitHub Repo stars](https://img.shields.io/github/stars/Fraunhofer-AISEC/DATA)
