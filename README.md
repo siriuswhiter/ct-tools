@@ -1,20 +1,34 @@
 ## Constant-timeness verification tools
 
 This page lists tools for testing and verification of constant-timeness of programs.
+The table is based mostly on the work in [*“They’re not that hard to mitigate”: What Cryptographic Library Developers Think About Timing Attacks*](https://crocs.fi.muni.cz/public/papers/usablect_sp22) with addition of more tools. 
+
 
 ![Oprah giving everyone a tool](/assets/img/oprah.jpg)
 
 ## Tools
 
+<table>
+<thead>
+	<th>Name</th>
+	<th>Year</th>
+	<th>Target</th>
+	<th>Technique</th>
+	<th>Guarantees</th>
+</thead>
+{% for tool in site.tools %}
+	<tr>
+		<td><a href="{{ tool.url | relative_url }}">{{ tool.name }}</a></td>
+		<td>{{ tool.year }}</td>
+		<td>{{ tool.target }}</td>
+		<td>{{ tool.technique }}</td>
+		<td>{{ tool.guarantees }}</td>
+	</tr>
+{% endfor %}
+</table>
+
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
-| [Abacus](tools/abacus)                  | 2021 | Binary  | Dynamic     | sound with restrictions |
-| [ABPV13](tools/abpv13)                  | 2013 | C       | Formal      | sound                   |
-| [ANABLEPS](tools/anableps)              | 2019 | Binary  | Dynamic     | no                      |
-| [Binsec/Rel](tools/binsec)              | 2020 | Binary  | Symbolic    | sound with restrictions |
-| [Blazer](tools/blazer)                  | 2017 | Java    | Formal      | sound                   |
-| [BPT17](tools/bpt17)                    | 2017 | C       | Symbolic    | sound with restrictions |
-| [CacheAudit](tools/cacheaudit)          | 2013 | Binary  | Formal      | other                   |
 | [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
 | [CacheFix](#cachefix)                   | 2018 | Trace   | Symbolic    | sound with restrictions |
 | [CacheQL](#cacheql)                     | 2022 | Binary  | Dynamic     | sound with restrictions |
@@ -51,48 +65,6 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [TriggerFlow](#triggerflow)             | 2018 | Binary  | Dynamic     | no                      |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
 
-This table is based mostly on the work in [*“They’re not that hard to mitigate”: What Cryptographic Library Developers Think About Timing Attacks*](https://crocs.fi.muni.cz/public/papers/usablect_sp22) with manual addition of more tools. 
-
-### Abacus
-
-- Introduced in “Abacus: A Tool for Precise Side-Channel Analysis” by Q. Bao, Z. Wang, J. R. Larus, and D. Wu; <https://doi.org/10.1109/ICSE-Companion52605.2021.00110>
-- **Tool available:** <https://github.com/s3team/Abacus> ![GitHub last commit](https://img.shields.io/github/last-commit/s3team/Abacus)![GitHub contributors](https://img.shields.io/github/contributors/s3team/Abacus)![GitHub Repo stars](https://img.shields.io/github/stars/s3team/Abacus)
-
-<a href="">More info</a>
-
-
-### ABPV13
-
-- Introduced in “Formal verification of side-channel countermeasures using self-composition” by J. B. Almeida, M. Barbosa, J. S. Pinto, and B. Vieira; <https://doi.org/10.1016/j.scico.2011.10.008>
-- **Tool not available**
-
-### ANABLEPS
-
- - Introduced in “Time and Order: Towards Automatically Identifying Side-Channel Vulnerabilities in Enclave Binaries” by W. Wang, Y. Zhang, and Z. Lin; <https://www.usenix.org/conference/raid2019/presentation/wang-wubing>
- - **Tool available:** <https://github.com/OSUSecLab/ANABLEPS> ![GitHub last commit](https://img.shields.io/github/last-commit/OSUSecLab/ANABLEPS) ![GitHub contributors](https://img.shields.io/github/contributors/OSUSecLab/ANABLEPS)![GitHub Repo stars](https://img.shields.io/github/stars/OSUSecLab/ANABLEPS)
-
-### Binsec/Rel
-
-- Introduced in “Binsec/rel: Efficient relational symbolic execution for constant-time at binary-level” by L. Daniel, S. Bardin, and T. Rezk; <https://doi.org/10.1109/SP40000.2020.00074>
-- **Tool available:** <https://github.com/binsec/binsec> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/Rel)![GitHub contributors](https://img.shields.io/github/contributors/binsec/binsec)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/binsec)
-- **Tests available:** <https://github.com/binsec/rel_bench> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/rel_bench)![GitHub contributors](https://img.shields.io/github/contributors/binsec/rel_bench)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/rel_bench)
-- **Binsec/Rel** is a static analysis tool that works on the binary level, thereby overcoming issues of compilers inserting non-constant-time code or turning constant-time code into non-constant-time one.
-
-### Blazer
-
-- Introduced in “Decomposition instead of self-composition for proving the absence of timing channels” by T. Antonopoulos, P. Gazzillo, M. Hicks, E. Koskinen, T. Terauchi, and S. Wei; <https://doi.org/10.1145/3062341.3062378>
-- **Tool not available**
-
-### BPT17
-
-- Introduced in “Verifying constant-time implementations by abstract interpretation” by S. Blazy, D. Pichardie, and A. Trieu; <https://doi.org/10.1007/978-3-319-66402-6_16>
-- **Tool available:** <http://irisa.fr/celtique/ext/esorics17/>
-
-### CacheAudit
-
-- Introduced in “CacheAudit: A tool for the static analysis of cache side channels” by G. Doychev, D. Feld, B. Köpf, L. Mauborgne, and J. Reineke; <https://www.usenix.org/conference/usenixsecurity13/technical-sessions/paper/doychev>
-- **Tool available:** <https://github.com/cacheaudit/cacheaudit> ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/cacheaudit/cacheaudit)![GitHub Repo stars](https://img.shields.io/github/stars/cacheaudit/cacheaudit)
-- **Website:**  <https://software.imdea.org/projects/cacheaudit/>
 
 ### CacheD
 
