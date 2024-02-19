@@ -3,3 +3,16 @@ readme_index:
   enabled:          true
   remove_originals: false
   with_frontmatter: false
+collections:
+  tools:
+    output: true
+defaults:
+ - scope:
+     path: ""
+   values:
+     layout: "default"
+ - scope:
+     path: ""
+     type: "tools"
+   values:
+     layout: "tools"
