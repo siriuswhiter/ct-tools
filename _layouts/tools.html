@@ -2,4 +2,23 @@
 layout: default
 ---
 
+<h2>Metadata</h2>
+<div id="tool-metadata">
+	<table>
+		<colgroup>
+			<col>
+			<col>
+		</colgroup>
+		<tr><th scope="row">Year</th><td>{{ page.year }}</td></tr>
+		<tr><th scope="row">Target</th><td>{{ page.target }}</td></tr>
+		<tr><th scope="row">Technique</th><td>{{ page.technique }}</td></tr>
+		<tr><th scope="row">Guarantees</th><td>{{ page.guarantees }}</td></tr>
+		<tr><th scope="row">Available</th><td>{% if page.available %}<b style="color: green;">yes</b>{% else %}<b style="color: red;">no</b>{% endif %}</td></tr>
+		{% if page.repo %}<tr><th scope="row">Repository</th><td><a href="{{ page.repo }}">{{ page.repo }}</a></td></tr>{% endif %}
+		{% if page.site %}<tr><th scope="row">Website</th><td><a href="{{ page.site }}">{{ page.site }}</a></td></tr>{% endif %}
+		{% if page.paper %}<tr><th scope="row">Paper</th><td><a href="{{ page.paper_link }}">{{ page.paper }}</a></td></tr>{% endif %}
+	</table>
+</div>
+
 {{ content }}
+

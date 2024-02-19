@@ -6,6 +6,7 @@ readme_index:
 collections:
   tools:
     output: true
+    permalink: /:collection/:name
 defaults:
  - scope:
      path: ""

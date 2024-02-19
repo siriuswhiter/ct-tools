@@ -1,3 +1,5 @@
+---
+---
 ## Constant-timeness verification tools
 
 This page lists tools for testing and verification of constant-timeness of programs.
@@ -8,7 +10,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
-| [Abacus](#abacus)                       | 2021 | Binary  | Dynamic     | sound with restrictions |
+| [Abacus](/tools/abacus)                 | 2021 | Binary  | Dynamic     | sound with restrictions |
 | [ABPV13](#abpv13)                       | 2013 | C       | Formal      | sound                   |
 | [ANABLEPS](#anableps)                   | 2019 | Binary  | Dynamic     | no                      |
 | [Binsec/Rel](#binsecrel)                | 2020 | Binary  | Symbolic    | sound with restrictions |
@@ -57,6 +59,9 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in “Abacus: A Tool for Precise Side-Channel Analysis” by Q. Bao, Z. Wang, J. R. Larus, and D. Wu; <https://doi.org/10.1109/ICSE-Companion52605.2021.00110>
 - **Tool available:** <https://github.com/s3team/Abacus> ![GitHub last commit](https://img.shields.io/github/last-commit/s3team/Abacus)![GitHub contributors](https://img.shields.io/github/contributors/s3team/Abacus)![GitHub Repo stars](https://img.shields.io/github/stars/s3team/Abacus)
+
+<a href="">More info</a>
+
 
 ### ABPV13
 
