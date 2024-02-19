@@ -15,16 +15,16 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [Blazer](#blazer)                       | 2017 | Java    | Formal      | sound                   |
 | [BPT17](#bpt17)                         | 2017 | C       | Symbolic    | sound with restrictions |
 | [CacheAudit](#cacheaudit)               | 2013 | Binary  | Formal      | other                   |
-| [CacheQL](#cacheql)                     | 2022 | Binary  | Dynamic     | sound with restrictions |
 | [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
+| [CacheFix](#cachefix)                   | 2018 | Trace   | Symbolic    | sound with restrictions |
+| [CacheQL](#cacheql)                     | 2022 | Binary  | Dynamic     | sound with restrictions |
 | [CacheS](#caches)                       | 2019 | Binary  | Formal      | sound with restrictions |
-| [CacheFix](#cachefix)                   | 2018 |         |             |                         |
-| [CANAL](#canal)                         | 2018 | LLVM IR | Formal      |                         |
+| [CANAL](#canal)                         | 2018 | LLVM IR | Formal      | sound                   |
 | [CaSym](#casym)                         | 2019 | LLVM IR | Symbolic    | sound                   |
 | [CaType](#catype)                       | 2022 | Binary  | Formal      | sound                   |
-| [CHALICE](#chalice)                     | 2019 |         |             |                         |
+| [CHALICE](#chalice)                     | 2019 | LLVM IR | Symbolic    | other                   |
 | [COCO-CHANNEL](#coco-channel)           | 2018 | Java    | Symbolic    | sound                   |
-| [Constantine](#constantine)             | 2021 |         |             |                         |
+| [Constantine](#constantine)             | 2021 | LLVM IR | Dynamic     | sound with restrictions |
 | [ctgrind](#ctgrind)                     | 2010 | Binary  | Dynamic     | sound with restrictions |
 | [ct-fuzz](#ct-fuzz)                     | 2020 | LLVM IR | Dynamic     | no                      |
 | [ct-verif](#ct-verif)                   | 2016 | LLVM IR | Formal      | sound                   |
@@ -37,22 +37,23 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [FlowTracker](#flowtracker)             | 2016 | LLVM IR | Formal      | sound                   |
 | [haybale-pitchfork](#haybale-pitchfork) | 2019 | LLVM IR | Symbolic    | sound with restrictions |
 | [KMO12](#kmo12)                         | 2012 | Binary  | Formal      | other                   |
-| [Manifold](#manifold)                   | 2022 |         |             |                         |
+| [Manifold](#manifold)                   | 2022 | Binary  | Statistical | no                      |
 | [MemSan](#memsan)                       | -    | LLVM IR | Dynamic     | sound with restrictions |
 | [MicroWalk](#microwalk)                 | 2018 | Binary  | Dynamic     | sound with restrictions |
-| [pitchfork-angr](#pitchfork-angr)       | 2019 |         |             |                         |
+| [pitchfork-angr](#pitchfork-angr)       | 2019 | Binary  | Symbolic    | no                      |
 | [SC-Eliminator](#sc-eliminator)         | 2018 | LLVM IR | Formal      | sound                   |
 | [SideTrail](#sidetrail)                 | 2018 | LLVM IR | Formal      | other                   |
 | [Themis](#themis)                       | 2017 | Java    | Formal      | sound                   |
 | [timecop](#timecop)                     | -    | Binary  | Dynamic     | sound with restrictions |
 | [tis-ct](#tis-ct)                       | -    | C       | Symbolic    | sound with restrictions |
-| [tlsfuzzer](#tlsfuzzer)                 | 2023 | Binary/Network | Statistical | other                   |
-| [TriggerFlow](#triggerflow)             | 2018 |         |             |                         |
+| [tlsfuzzer](#tlsfuzzer)                 | 2023 | Network | Statistical | other                   |
+| [TriggerFlow](#triggerflow)             | 2018 | Binary  | Dynamic     | no                      |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
 
 This table is based mostly on the work in [*“They’re not that hard to mitigate”: What Cryptographic Library Developers Think About Timing Attacks*](https://crocs.fi.muni.cz/public/papers/usablect_sp22) with manual addition of more tools. 
 
 ### Abacus
+
 - Introduced in “Abacus: A Tool for Precise Side-Channel Analysis” by Q. Bao, Z. Wang, J. R. Larus, and D. Wu; <https://doi.org/10.1109/ICSE-Companion52605.2021.00110>
 - **Tool available:** <https://github.com/s3team/Abacus> ![GitHub last commit](https://img.shields.io/github/last-commit/s3team/Abacus)![GitHub contributors](https://img.shields.io/github/contributors/s3team/Abacus)![GitHub Repo stars](https://img.shields.io/github/stars/s3team/Abacus)
 
@@ -69,7 +70,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### Binsec/Rel
 
 - Introduced in “Binsec/rel: Efficient relational symbolic execution for constant-time at binary-level” by L. Daniel, S. Bardin, and T. Rezk; <https://doi.org/10.1109/SP40000.2020.00074>
-- **Tool available:** <https://github.com/binsec/Rel> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/Rel)![GitHub contributors](https://img.shields.io/github/contributors/binsec/Rel)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/Rel)
+- **Tool available:** <https://github.com/binsec/binsec> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/Rel)![GitHub contributors](https://img.shields.io/github/contributors/binsec/binsec)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/binsec)
 - **Tests available:** <https://github.com/binsec/rel_bench> ![GitHub last commit](https://img.shields.io/github/last-commit/binsec/rel_bench)![GitHub contributors](https://img.shields.io/github/contributors/binsec/rel_bench)![GitHub Repo stars](https://img.shields.io/github/stars/binsec/rel_bench)
 - **Binsec/Rel** is a static analysis tool that works on the binary level, thereby overcoming issues of compilers inserting non-constant-time code or turning constant-time code into non-constant-time one.
 
@@ -89,18 +90,9 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 - **Tool available:** <https://github.com/cacheaudit/cacheaudit> ![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/cacheaudit/cacheaudit)![GitHub Repo stars](https://img.shields.io/github/stars/cacheaudit/cacheaudit)
 - **Website:**  <https://software.imdea.org/projects/cacheaudit/>
 
-### CacheQL
-- Introduced in “CacheQL: Quantifying and Localizing Cache Side-Channel Vulnerabilities in Production Software” by Y. Yuan, Z. Liu, and S. Wang; <https://arxiv.org/abs/2209.14952>
-- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL> ![GitHub last commit](https://img.shields.io/github/last-commit/Yuanyuan-Yuan/CacheQL)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
-
 ### CacheD
 
 - Introduced in “Cached: Identifying cache-based timing channels in production software” by S. Wang, P. Wang, X. Liu, D. Zhang, and D. Wu; <https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/wang-shuai>
-- **Tool not available**
-
-### CacheS
-
-- Introduced in “Identifying cache-based side channels through secret-augmented abstract interpretation” by S. Wang, Y. Bao, X. Liu, P. Wang, D. Zhang, and D. Wu; <https://www.usenix.org/conference/usenixsecurity19/presentation/wang-shuai>
 - **Tool not available**
 
 ### CacheFix
@@ -108,23 +100,35 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 - Introduced in “Symbolic verification of cache side-channel freedom” by S. Chattopadhyay and A. Roychoudhury; <https://doi.org/10.1109/TCAD.2018.2858402>
 - **Tool available:** <https://bitbucket.org/sudiptac/cachefix/src/master/> ![](https://img.shields.io/badge/last%20commit-may%202018-red)
 
+### CacheQL
+
+- Introduced in “CacheQL: Quantifying and Localizing Cache Side-Channel Vulnerabilities in Production Software” by Y. Yuan, Z. Liu, and S. Wang; <https://arxiv.org/abs/2209.14952>
+- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL> ![GitHub last commit](https://img.shields.io/github/last-commit/Yuanyuan-Yuan/CacheQL)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
+
+### CacheS
+
+- Introduced in “Identifying cache-based side channels through secret-augmented abstract interpretation” by S. Wang, Y. Bao, X. Liu, P. Wang, D. Zhang, and D. Wu; <https://www.usenix.org/conference/usenixsecurity19/presentation/wang-shuai>
+- **Tool not available**
+
 ### CANAL
 
 - Introduced in “CANAL: a cache timing analysis framework via LLVM transformation” by C. Sung, B. Paulsen, and C. Wang; <https://dl.acm.org/doi/10.1145/3238147.3240485>
 - **Tool available:** <https://github.com/canalcache/canal> ![GitHub last commit](https://img.shields.io/github/last-commit/canalcache/canal)![GitHub contributors](https://img.shields.io/github/contributors/canalcache/canal)![GitHub Repo stars](https://img.shields.io/github/stars/canalcache/canal)
 
 ### CaSym
+
 - Introduced in “CaSym: Cache Aware Symbolic Execution for Side Channel Detection and Mitigation” by R. Brotzman, S. Liu, D. Zhang, G. Tan, M. Kandemir; <https://doi.org/10.1109/SP.2019.00022>
+- **Tool not available**
+
+### CaType
+
+- Introduced in “Cache Refinement Type for Side-Channel Detection of Cryptographic Software” by K. Jiang, Y. Bao, S. Wang, Z. Liu, and T. Zhang; <https://arxiv.org/abs/2209.04610v2>
 - **Tool not available**
 
 ### CHALICE
 
 - Introduced in “Quantifying the Information Leakage in Cache Attacks via Symbolic Execution” by S. Chattopadhyay,  M. Beck, A. Rezine, and A. Zeller; <https://dl.acm.org/doi/10.1145/3288758>
 - **Tool available:** <https://bitbucket.org/sudiptac/chalice>
-
-### CaType
-- Introduced in “Cache Refinement Type for Side-Channel Detection of Cryptographic Software” by K. Jiang, Y. Bao, S. Wang, Z. Liu, and T. Zhang; <https://arxiv.org/abs/2209.04610v2>
-- **Tool not available**
 
 ### COCO-CHANNEL
 
@@ -176,7 +180,7 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 ### ENCIDER
 
 - Introduced in “ENCIDER: Detecting Timing and Cache Side Channels in SGX Enclaves and Cryptographic APIs” by Tuba Yavuz, Farhaan Fowze, Grant Hernandez, Ken Yihang Bai, Kevin Butler, and Dave Jing Tian; <https://ieeexplore.ieee.org/abstract/document/9737388>
-- **Tool not yet available:** <https://github.com/sysrel/ENCIDER>
+- **Tool available:** <https://github.com/sysrel/ENCIDER>
 
 ### ENCoVer
 
@@ -218,7 +222,8 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 ### MicroWalk
 
-- Introduced in “Microwalk: A framework for finding side channels in binaries” by J. Wichelmann, A. Moghimi, T. Eisenbarth, and B. Sunar; <https://doi.org/10.1145/3274694.3274741>
+- Introduced in “Microwalk: A framework for finding side channels in binaries” by J. Wichelmann, A. Moghimi, T. Eisenbarth, and B. Sunar; <https://doi.org/10.1145/3274694.3274741>,
+- Extended in “Microwalk-CI: Practical Side-Channel Analysis for JavaScript Applications” by J. Wichelmann, F. Sieck, A. Pätschke and T. Eisenbarth; <https://doi.org/10.1145/3548606.3560654>
 - The **MicroWalk** framework is a dynamic tool that uses Dynamic Binary Instrumentation (DBI) and Mutual Information Analysis (MIA). As a dynamic tool, it runs the target with random inputs and uses dynamic binary instrumentation to log events such as memory allocations, branches, calls, returns, memory reads/writes as well as stack operations into an execution trace. It then processes these traces by applying the chosen leakage model, i.e., in the branching model, it only keeps the control flow events in the execution traces. After collection of traces, it offers several analysis options, either directly comparing the traces or using mutual information analysis either on the whole trace or a specific offset in the execution traces (a specific instruction).
 - **Tool available:** <https://github.com/UzL-ITS/Microwalk> ![GitHub last commit](https://img.shields.io/github/last-commit/UzL-ITS/Microwalk)![GitHub contributors](https://img.shields.io/github/contributors/UzL-ITS/Microwalk)![GitHub Repo stars](https://img.shields.io/github/stars/UzL-ITS/Microwalk)
 
