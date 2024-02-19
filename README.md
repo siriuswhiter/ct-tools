@@ -41,6 +41,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 | [MemSan](#memsan)                       | -    | LLVM IR | Dynamic     | sound with restrictions |
 | [MicroWalk](#microwalk)                 | 2018 | Binary  | Dynamic     | sound with restrictions |
 | [pitchfork-angr](#pitchfork-angr)       | 2019 | Binary  | Symbolic    | no                      |
+| [pin_based_cec](#pin-based-cec)         | 2019 | Binary  | Dynamic     | sound with restrictions |
 | [SC-Eliminator](#sc-eliminator)         | 2018 | LLVM IR | Formal      | sound                   |
 | [SideTrail](#sidetrail)                 | 2018 | LLVM IR | Formal      | other                   |
 | [Themis](#themis)                       | 2017 | Java    | Formal      | sound                   |
@@ -231,6 +232,11 @@ This table is based mostly on the work in [*“They’re not that hard to mitiga
 
 - Introduced in <https://github.com/PLSysSec/pitchfork-angr>
 - **Tool available:** <https://github.com/PLSysSec/pitchfork-angr> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/pitchfork-angr)![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/pitchfork-angr)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/pitchfork-angr)
+
+### Pin-based-CEC
+
+- Introduced in <https://github.com/intel/pin-based-cec>
+- **Tool available:** <https://github.com/intel/pin-based-cec> ![GitHub last commit](https://img.shields.io/github/last-commit/intel/pin-based-cec)![GitHub contributors](https://img.shields.io/github/contributors/intel/pin-based-cec)![GitHub Repo stars](https://img.shields.io/github/stars/intel/pin-based-cec)
 
 ### SC-Eliminator
 
