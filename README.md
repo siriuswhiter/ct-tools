@@ -1,5 +1,3 @@
----
----
 ## Constant-timeness verification tools
 
 This page lists tools for testing and verification of constant-timeness of programs.
@@ -10,7 +8,7 @@ This page lists tools for testing and verification of constant-timeness of progr
 
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
-| [Abacus](/tools/abacus)                 | 2021 | Binary  | Dynamic     | sound with restrictions |
+| [Abacus](tools/abacus)                  | 2021 | Binary  | Dynamic     | sound with restrictions |
 | [ABPV13](#abpv13)                       | 2013 | C       | Formal      | sound                   |
 | [ANABLEPS](#anableps)                   | 2019 | Binary  | Dynamic     | no                      |
 | [Binsec/Rel](#binsecrel)                | 2020 | Binary  | Symbolic    | sound with restrictions |
