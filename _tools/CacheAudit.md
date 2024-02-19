@@ -14,6 +14,8 @@ papers:
    link: https://www.usenix.org/conference/usenixsecurity13/technical-sessions/paper/doychev
 ---
 
+![GitHub last commit](https://img.shields.io/github/last-commit/cacheaudit/cacheaudit)![GitHub contributors](https://img.shields.io/github/contributors/cacheaudit/cacheaudit)![GitHub Repo stars](https://img.shields.io/github/stars/cacheaudit/cacheaudit)
+
 ## Abstract
 
 We present CacheAudit, a versatile framework for the automatic, static analysis
