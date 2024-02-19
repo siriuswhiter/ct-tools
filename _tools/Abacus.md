@@ -8,8 +8,9 @@ technique: Dynamic
 guarantees: "sound with restrictions"
 available: true
 repo: https://github.com/s3team/Abacus
-paper: "Abacus: A Tool for Precise Side-Channel Analysis"
-paper_link: https://doi.org/10.1109/ICSE-Companion52605.2021.00110
+papers:
+ - name: "Abacus: A Tool for Precise Side-Channel Analysis"
+   link: https://doi.org/10.1109/ICSE-Companion52605.2021.00110
 ---
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/s3team/Abacus)![GitHub contributors](https://img.shields.io/github/contributors/s3team/Abacus)![GitHub Repo stars](https://img.shields.io/github/stars/s3team/Abacus)
