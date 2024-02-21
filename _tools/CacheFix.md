@@ -1,6 +1,6 @@
 ---
 slug: cachefix
-name: CacheFix
+title: CacheFix
 description: "Symbolic verification of cache side-channel freedom"
 year: 2018
 target: Trace

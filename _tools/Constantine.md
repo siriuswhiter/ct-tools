@@ -1,6 +1,6 @@
 ---
 slug: constantine
-name: Constantine
+title: Constantine
 description: "Constantine: Automatic side-channel resistance using efficient control and data flow linearization"
 year: 2021
 target: LLVM IR

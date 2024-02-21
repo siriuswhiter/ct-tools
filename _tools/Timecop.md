@@ -1,6 +1,6 @@
 ---
 slug: timecop
-name: Timecop
+title: Timecop
 description: "-"
 year: "-"
 target: Binary

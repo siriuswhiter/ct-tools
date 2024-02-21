@@ -1,6 +1,6 @@
 ---
 slug: caches
-name: CacheS
+title: CacheS
 description: "Identifying cache-based side channels through secret-augmented abstract interpretation"
 year: 2019
 target: Binary

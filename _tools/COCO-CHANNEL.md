@@ -1,6 +1,6 @@
 ---
 slug: coco-channel
-name: COCO-CHANNEL
+title: COCO-CHANNEL
 description: "Symbolic path cost analysis for side-channel detection"
 year: 2018
 target: Java

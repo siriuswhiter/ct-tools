@@ -1,6 +1,6 @@
 ---
 slug: tlsfuzzer
-name: tlsfuzzer
+title: tlsfuzzer
 description: "-"
 year: 2023
 target: Network

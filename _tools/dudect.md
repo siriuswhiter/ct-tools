@@ -1,6 +1,6 @@
 ---
 slug: dudect
-name: dudect
+title: dudect
 description: "Dude, is my code constant time?"
 year: 2017
 target: Binary

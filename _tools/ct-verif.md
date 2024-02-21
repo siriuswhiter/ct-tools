@@ -1,6 +1,6 @@
 ---
 slug: ct-verif
-name: ct-verif
+title: ct-verif
 description: "Verifying Constant-Time Implementations"
 year: 2016
 target: LLVM IR

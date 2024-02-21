@@ -1,6 +1,6 @@
 ---
 slug: data
-name: DATA
+title: DATA
 description: "DATA - differential address trace analysis: Finding address-based side-channels in binaries"
 year: 2018
 target: Binary

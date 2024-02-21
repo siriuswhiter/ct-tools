@@ -1,6 +1,6 @@
 ---
 slug: sidetrail
-name: SideTrail
+title: SideTrail
 description: "SideTrail: Verifying time-balancing of cryptosystems"
 year: 2018
 target: LLVM IR

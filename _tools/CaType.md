@@ -1,6 +1,6 @@
 ---
 slug: catype
-name: CaType
+title: CaType
 description: "Cache Refinement Type for Side-Channel Detection of Cryptographic Software"
 year: 2022
 target: Binary

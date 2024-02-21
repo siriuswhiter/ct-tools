@@ -1,6 +1,6 @@
 ---
 slug: ctgrind
-name: ctgrind
+title: ctgrind
 description: "-"
 year: 2010
 target: Binary

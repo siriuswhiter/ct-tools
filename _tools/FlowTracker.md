@@ -1,6 +1,6 @@
 ---
 slug: flowtracker
-name: FlowTracker
+title: FlowTracker
 description: "Sparse representation of implicit flows with applications to side-channel detection"
 year: 2016
 target: LLVM IR

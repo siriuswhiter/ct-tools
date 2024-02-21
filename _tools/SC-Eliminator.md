@@ -1,6 +1,6 @@
 ---
 slug: sc-eliminator
-name: SC-Eliminator
+title: SC-Eliminator
 description: "Eliminating timing side-channel leaks using program repair"
 year: 2018
 target: LLVM IR

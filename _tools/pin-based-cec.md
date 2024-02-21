@@ -1,6 +1,6 @@
 ---
 slug: pin-based-cec
-name: "Pin-based CEC"
+title: "Pin-based CEC"
 description: "-"
 year: 2019
 target: Binary

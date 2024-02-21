@@ -1,6 +1,6 @@
 ---
 slug: cached
-name: CacheD
+title: CacheD
 description: "CacheD: Identifying cache-based timing channels in production software"
 year: 2016
 target: Trace

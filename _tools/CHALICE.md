@@ -1,6 +1,6 @@
 ---
 slug: chalice
-name: CHALICE
+title: CHALICE
 description: "Quantifying the Information Leakage in Cache Attacks via Symbolic Execution"
 year: 2019
 target: LLVM IR

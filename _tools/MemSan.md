@@ -1,6 +1,6 @@
 ---
 slug: memsan
-name: MemSan
+title: MemSan
 description: "LLVM MemorySanitizer"
 year: "-"
 target: LLVM IR

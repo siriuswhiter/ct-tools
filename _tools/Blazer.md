@@ -1,6 +1,6 @@
 ---
 slug: blazer
-name: Blazer
+title: Blazer
 description: "Decomposition instead of self-composition for proving the absence of timing channels"
 year: 2017
 target: Java

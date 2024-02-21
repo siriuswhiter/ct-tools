@@ -1,6 +1,6 @@
 ---
 slug: fact
-name: FaCT
+title: FaCT
 description: "FaCT: a DSL for timing-sensitive computation"
 year: 2019
 target: DSL

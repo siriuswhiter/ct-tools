@@ -1,6 +1,6 @@
 ---
 slug: bpt17
-name: BPT17
+title: BPT17
 description: "Verifying constant-time implementations by abstract interpretation"
 year: 2017
 target: C

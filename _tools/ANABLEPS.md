@@ -1,6 +1,6 @@
 ---
 slug: anableps
-name: ANABLEPS
+title: ANABLEPS
 description: "Time and Order: Towards Automatically Identifying Side-Channel Vulnerabilities in Enclave Binaries"
 year: 2019
 target: Binary

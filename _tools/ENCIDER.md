@@ -1,6 +1,6 @@
 ---
 slug: encider
-name: ENCIDER
+title: ENCIDER
 description: "ENCIDER: Detecting Timing and Cache Side Channels in SGX Enclaves and Cryptographic APIs"
 year: 2022
 target: LLVM IR

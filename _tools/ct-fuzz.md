@@ -1,6 +1,6 @@
 ---
 slug: ct-fuzz
-name: ct-fuzz
+title: ct-fuzz
 description: "ct-fuzz: Fuzzing for timing leaks"
 year: 2020
 target: LLVM IR

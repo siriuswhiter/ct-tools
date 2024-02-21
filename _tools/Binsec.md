@@ -1,7 +1,7 @@
 ---
 slug: binsec
-name: Binsec
-description: "Binsec/rel: Efficient relational symbolic execution for constant-time at binary-level"
+title: Binsec
+description: "Binsec/Rel: Efficient relational symbolic execution for constant-time at binary-level"
 year: 2020
 target: Binary
 technique: Symbolic

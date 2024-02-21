@@ -1,6 +1,6 @@
 ---
 slug: kmo12
-name: KMO12
+title: KMO12
 description: "Automatic quantification of cache side-channels"
 year: 2012
 target: Binary

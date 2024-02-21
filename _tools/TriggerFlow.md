@@ -1,6 +1,6 @@
 ---
 slug: triggerflow
-name: TriggerFlow
+title: TriggerFlow
 description: "Triggerflow: Regression Testing by Advanced Execution Path Inspection"
 year: 2018
 target: Binary

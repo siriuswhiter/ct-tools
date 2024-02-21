@@ -1,6 +1,6 @@
 ---
 slug: microwalk
-name: Microwalk
+title: Microwalk
 description: "Microwalk: A framework for finding side channels in binaries"
 year: 2018
 target: Binary

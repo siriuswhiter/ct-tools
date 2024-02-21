@@ -1,6 +1,6 @@
 ---
 slug: virtualcert
-name: VirtualCert
+title: VirtualCert
 description: "System-level non-interference for constant-time cryptography"
 year: 2014
 target: x86

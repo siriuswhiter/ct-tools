@@ -1,6 +1,6 @@
 ---
 slug: pitchfork-angr
-name: pitchfork-angr
+title: pitchfork-angr
 description: "-"
 year: 2019
 target: Binary

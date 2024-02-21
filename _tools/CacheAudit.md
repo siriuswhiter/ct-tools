@@ -1,6 +1,6 @@
 ---
 slug: cacheaudit
-name: CacheAudit
+title: CacheAudit
 description: "CacheAudit: A tool for the static analysis of cache side channels"
 year: 2013
 target: Binary

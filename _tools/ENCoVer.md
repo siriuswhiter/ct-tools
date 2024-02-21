@@ -1,6 +1,6 @@
 ---
 slug: encover
-name: ENCoVer
+title: ENCoVer
 description: "ENCoVer: Symbolic exploration for information flow security"
 year: 2012
 target: Java

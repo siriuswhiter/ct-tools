@@ -1,6 +1,6 @@
 ---
 slug: haybale-pitchfork
-name: haybale-pitchfork
+title: haybale-pitchfork
 description: "-"
 year: 2019
 target: LLVM IR

@@ -1,6 +1,6 @@
 ---
 slug: canal
-name: CANAL
+title: CANAL
 description: "CANAL: a cache timing analysis framework via LLVM transformation"
 year: 2018
 target: LLVM IR

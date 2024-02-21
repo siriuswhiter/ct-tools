@@ -1,6 +1,6 @@
 ---
 slug: cacheql
-name: CacheQL
+title: CacheQL
 description: "CacheQL: Quantifying and Localizing Cache Side-Channel Vulnerabilities in Production Software"
 year: 2022
 target: Binary

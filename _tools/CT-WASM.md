@@ -1,6 +1,6 @@
 ---
 slug: ct-wasm
-name: CT-WASM
+title: CT-WASM
 description: "CT-WASM: type-driven secure cryptography for the web ecosystem"
 year: 2019
 target: WASM

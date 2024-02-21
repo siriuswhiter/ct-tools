@@ -1,6 +1,6 @@
 ---
 slug: themis
-name: Themis
+title: Themis
 description: "Precise detection of side-channel vulnerabilities using quantitative cartesian hoare logic"
 year: 2017
 target: Java

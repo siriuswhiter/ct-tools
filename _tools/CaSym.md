@@ -1,6 +1,6 @@
 ---
 slug: casym
-name: CaSym
+title: CaSym
 description: "CaSym: Cache Aware Symbolic Execution for Side Channel Detection and Mitigation"
 year: 2019
 target: LLVM IR

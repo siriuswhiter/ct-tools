@@ -1,6 +1,6 @@
 ---
 slug: abacus
-name: Abacus
+title: Abacus
 description: "Abacus: A Tool for Precise Side-Channel Analysis"
 year: 2021
 target: Binary

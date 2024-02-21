@@ -1,6 +1,6 @@
 ---
 slug: apbv13
-name: ABPV13
+title: ABPV13
 description: "Formal verification of side-channel countermeasures using self-composition"
 year: 2013
 target: C
