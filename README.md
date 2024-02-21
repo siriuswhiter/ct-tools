@@ -29,16 +29,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
-| [CacheD](#cached)                       | 2016 | Trace   | Symbolic    | no                      |
-| [CacheFix](#cachefix)                   | 2018 | Trace   | Symbolic    | sound with restrictions |
-| [CacheQL](#cacheql)                     | 2022 | Binary  | Dynamic     | sound with restrictions |
-| [CacheS](#caches)                       | 2019 | Binary  | Formal      | sound with restrictions |
-| [CANAL](#canal)                         | 2018 | LLVM IR | Formal      | sound                   |
-| [CaSym](#casym)                         | 2019 | LLVM IR | Symbolic    | sound                   |
-| [CaType](#catype)                       | 2022 | Binary  | Formal      | sound                   |
-| [CHALICE](#chalice)                     | 2019 | LLVM IR | Symbolic    | other                   |
-| [COCO-CHANNEL](#coco-channel)           | 2018 | Java    | Symbolic    | sound                   |
-| [Constantine](#constantine)             | 2021 | LLVM IR | Dynamic     | sound with restrictions |
 | [ctgrind](#ctgrind)                     | 2010 | Binary  | Dynamic     | sound with restrictions |
 | [ct-fuzz](#ct-fuzz)                     | 2020 | LLVM IR | Dynamic     | no                      |
 | [ct-verif](#ct-verif)                   | 2016 | LLVM IR | Formal      | sound                   |
@@ -65,56 +55,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 | [TriggerFlow](#triggerflow)             | 2018 | Binary  | Dynamic     | no                      |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
 
-
-### CacheD
-
-- Introduced in “Cached: Identifying cache-based timing channels in production software” by S. Wang, P. Wang, X. Liu, D. Zhang, and D. Wu; <https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/wang-shuai>
-- **Tool not available**
-
-### CacheFix
-
-- Introduced in “Symbolic verification of cache side-channel freedom” by S. Chattopadhyay and A. Roychoudhury; <https://doi.org/10.1109/TCAD.2018.2858402>
-- **Tool available:** <https://bitbucket.org/sudiptac/cachefix/src/master/> ![](https://img.shields.io/badge/last%20commit-may%202018-red)
-
-### CacheQL
-
-- Introduced in “CacheQL: Quantifying and Localizing Cache Side-Channel Vulnerabilities in Production Software” by Y. Yuan, Z. Liu, and S. Wang; <https://arxiv.org/abs/2209.14952>
-- **Tool (will be) availablle:** <https://github.com/Yuanyuan-Yuan/CacheQL> ![GitHub last commit](https://img.shields.io/github/last-commit/Yuanyuan-Yuan/CacheQL)![GitHub contributors](https://img.shields.io/github/contributors/Yuanyuan-Yuan/CacheQL)![GitHub Repo stars](https://img.shields.io/github/stars/Yuanyuan-Yuan/CacheQL)
-
-### CacheS
-
-- Introduced in “Identifying cache-based side channels through secret-augmented abstract interpretation” by S. Wang, Y. Bao, X. Liu, P. Wang, D. Zhang, and D. Wu; <https://www.usenix.org/conference/usenixsecurity19/presentation/wang-shuai>
-- **Tool not available**
-
-### CANAL
-
-- Introduced in “CANAL: a cache timing analysis framework via LLVM transformation” by C. Sung, B. Paulsen, and C. Wang; <https://dl.acm.org/doi/10.1145/3238147.3240485>
-- **Tool available:** <https://github.com/canalcache/canal> ![GitHub last commit](https://img.shields.io/github/last-commit/canalcache/canal)![GitHub contributors](https://img.shields.io/github/contributors/canalcache/canal)![GitHub Repo stars](https://img.shields.io/github/stars/canalcache/canal)
-
-### CaSym
-
-- Introduced in “CaSym: Cache Aware Symbolic Execution for Side Channel Detection and Mitigation” by R. Brotzman, S. Liu, D. Zhang, G. Tan, M. Kandemir; <https://doi.org/10.1109/SP.2019.00022>
-- **Tool not available**
-
-### CaType
-
-- Introduced in “Cache Refinement Type for Side-Channel Detection of Cryptographic Software” by K. Jiang, Y. Bao, S. Wang, Z. Liu, and T. Zhang; <https://arxiv.org/abs/2209.04610v2>
-- **Tool not available**
-
-### CHALICE
-
-- Introduced in “Quantifying the Information Leakage in Cache Attacks via Symbolic Execution” by S. Chattopadhyay,  M. Beck, A. Rezine, and A. Zeller; <https://dl.acm.org/doi/10.1145/3288758>
-- **Tool available:** <https://bitbucket.org/sudiptac/chalice>
-
-### COCO-CHANNEL
-
-- Introduced in “Symbolic path cost analysis for side-channel detection” by T. Brennan, S. Saha, T. Bultan, and C. S. Pasareanu; <https://doi.org/10.1145/3213846.3213867>
-- **Tool not available**
-
-### Constantine
-
-- Introduced in “Constantine: Automatic side-channel resistance using efficient control and data flow linearization” by P. Borrello, D. C. D’Elia, L. Querzoni, and C. Giuffrida; <https://arxiv.org/abs/2104.10749>
-- **Tool available:** <https://github.com/pietroborrello/constantine> ![GitHub last commit](https://img.shields.io/github/last-commit/pietroborrello/constantine)![GitHub contributors](https://img.shields.io/github/contributors/pietroborrello/constantine)![GitHub Repo stars](https://img.shields.io/github/stars/pietroborrello/constantine)
 
 ### ctgrind
 
