@@ -1,7 +1,7 @@
 ---
 slug: ctgrind
 name: ctgrind
-description: ""
+description: "-"
 year: 2010
 target: Binary
 technique: Dynamic
@@ -23,5 +23,5 @@ Valgrind's memcheck supports the `VALGRIND_MAKE_MEM_UNDEFINED` and
 `VALGRIND_MAKE_MEM_DEFINED` client requests, it is now possible to implement a
 ctgrind-like approach without patches to Valgrind. Furthermore, the patches
 are now outdated and no longer work with modern versions of Valgrind. Thus,
-use Valgrind directly or use the [Timecop](tools/timecop) tool, which is a
+use Valgrind directly or use the [Timecop](timecop) tool, which is a
 modern analogue of ctgrind.

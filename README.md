@@ -29,12 +29,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
-| [FaCT](#fact)                           | 2019 | DSL     | Formal      | sound                   |
-| [FlowTracker](#flowtracker)             | 2016 | LLVM IR | Formal      | sound                   |
-| [haybale-pitchfork](#haybale-pitchfork) | 2019 | LLVM IR | Symbolic    | sound with restrictions |
-| [KMO12](#kmo12)                         | 2012 | Binary  | Formal      | other                   |
-| [Manifold](#manifold)                   | 2022 | Binary  | Statistical | no                      |
-| [MemSan](#memsan)                       | -    | LLVM IR | Dynamic     | sound with restrictions |
 | [MicroWalk](#microwalk)                 | 2018 | Binary  | Dynamic     | sound with restrictions |
 | [pitchfork-angr](#pitchfork-angr)       | 2019 | Binary  | Symbolic    | no                      |
 | [pin_based_cec](#pin-based-cec)         | 2019 | Binary  | Dynamic     | sound with restrictions |
@@ -47,39 +41,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 | [TriggerFlow](#triggerflow)             | 2018 | Binary  | Dynamic     | no                      |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
 
-
-### FaCT
-
-- Introduced in “FaCT: a DSL for timing-sensitive computation” by S. Cauligi, G. Soeller, B. Johannesmeyer, F. Brown, R. S. Wahby,
-  J. Renner, B. Grégoire, G. Barthe, R. Jhala, and D. Stefan; <https://doi.org/10.1145/3314221.3314605>
-- The **FaCT** tool is less of a tool for analysis of implementations for timing leakage and more of a domain-specific language for writing constant-time implementations that automatically removes leakage during compilation. The language is C-like, compiles into LLVM IR, and offers the `secret` keyword, which is used to mark certain variables as secret, which then triggers the compiler to generate constant-time code with regards to their values.
-- **Tool available:** <https://github.com/plsyssec/fact> ![GitHub last commit](https://img.shields.io/github/last-commit/plsyssec/fact)![GitHub contributors](https://img.shields.io/github/contributors/plsyssec/fact)![GitHub Repo stars](https://img.shields.io/github/stars/plsyssec/fact)
-
-### FlowTracker
-
-- Introduced in “Sparse representation of implicit flows with applications to side-channel detection” by B. Rodrigues, F. M. Q. Pereira, and D. F. Aranha; <https://doi.org/10.1145/2892208.2892230>
-- The **FlowTracker** tool is a static tool that works by analyzing the Program Dependence Graph (PDG) of the target in LLVM IR form.
-- **Tool not available:** <http://cuda.dcc.ufmg.br/flowtracker/>
-
-### haybale-pitchfork
-
-- Introduced in <https://github.com/PLSysSec/haybale-pitchfork>
-- **Tool available:** <https://github.com/PLSysSec/haybale-pitchfork> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/haybale-pitchfork)![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/haybale-pitchfork)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/haybale-pitchfork)
-
-### KMO12
-
-- Introduced in “Automatic quantification of cache side-channels” by B. Köpf, L. Mauborgne, and M. Ochoa; <https://doi.org/10.1007/978-3-642-31424-7_40>
-- **Tool not available, superseded by [CacheAudit](#cacheaudit)**
-
-### Manifold
-
-- Introduced in “Automated side channel analysis of media software with manifold learning” by Y. Yuan, Q. Pang, and S. Wang; <https://www.usenix.org/conference/usenixsecurity22/presentation/yuan-yuanyuan>
-- **Tool available:** <https://zenodo.org/record/5816702#.YdQMHxNByjA>
-
-### MemSan
-
-- Introduced in <https://clang.llvm.org/docs/MemorySanitizer.html>
-- **Tool available:** Use MemorySanitizer.
 
 ### MicroWalk
 
