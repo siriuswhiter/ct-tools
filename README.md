@@ -29,9 +29,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
-| [ctgrind](#ctgrind)                     | 2010 | Binary  | Dynamic     | sound with restrictions |
-| [ct-fuzz](#ct-fuzz)                     | 2020 | LLVM IR | Dynamic     | no                      |
-| [ct-verif](#ct-verif)                   | 2016 | LLVM IR | Formal      | sound                   |
 | [CT-WASM](#ct-wasm)                     | 2019 | WASM    | Formal      | sound                   |
 | [DATA](#data)                           | 2018 | Binary  | Dynamic     | sound with restrictions |
 | [dudect](#dudect)                       | 2017 | Binary  | Statistical | no                      |
@@ -55,25 +52,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 | [TriggerFlow](#triggerflow)             | 2018 | Binary  | Dynamic     | no                      |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
 
-
-### ctgrind
-
-- Introduced in <https://github.com/agl/ctgrind> and <https://www.imperialviolet.org/2010/04/01/ctgrind.html>.
-- **ctgrind** is a patch available for the Valgrind (memcheck) tool, which adds functionality to mark areas of memory as uninitialized. This is to be used on secrets. At runtime, the memcheck tool then checks that the secret(uninitialized) memory is not used in branches or for memory access. As Valgrind's memcheck supports the `VALGRIND_MAKE_MEM_UNDEFINED` and `VALGRIND_MAKE_MEM_DEFINED` client requests, it is now possible to implement a ctgrind-like approach without patches to Valgrind.
-- **Tool available:** Use Valgrind directly.
-
-### ct-fuzz
-
-- Introduced in “ct-fuzz: Fuzzing for timing leaks” by S. He, M. Emmi, and G. F. Ciocarlie; <https://doi.org/10.1109/ICST46399.2020.00063>
-- **ct-fuzz** takes inspiration from **ct-verif** in its method but diverges significantly. It first constructs a product program using self-composition of the target with itself, where it asserts that at each point that the memory address accessed by the two programs, whether through control from or indexing, is the same. It then uses a fuzzer against this product program, which splits its fuzzing input equally into the secret inputs for the two instances or the original program in the product program. If the fuzzer detects a failed assert, leakage is detected, as it found two runs through the target, which differ only in secret inputs yet access different offsets in memory.
-- **Tool available:** <https://github.com/michael-emmi/ct-fuzz> ![GitHub last commit](https://img.shields.io/github/last-commit/michael-emmi/ct-fuzz)![GitHub contributors](https://img.shields.io/github/contributors/michael-emmi/ct-fuzz)![GitHub Repo stars](https://img.shields.io/github/stars/michael-emmi/ct-fuzz)
-
-### ct-verif
-
-- Introduced in “Verifying Constant-Time Implementations” by J. B. Almeida, M. Barbosa, G. Barthe, F. Dupressoir and M. Emmi; <https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_almeida.pdf>
-- The **ct-verif** tool is a static analysis tool verifying constant-time properties of code, working on the level of LLVM IR, with source code annotations. It uses the [SMACK](http://smackers.github.io/) modular software verification toolchain, [Bam-Bam-Boogieman](https://github.com/michael-emmi/bam-bam-boogieman) for Boogie source transformation, [Boogie](https://github.com/boogie-org/boogie) intermediate verification language as well as the [Corral](https://github.com/boogie-org/corral) and [Z3](https://github.com/Z3Prover/z3) solvers. 
-- The tool is actively deployed in the CI of Amazon's **s2n** library at [link](https://github.com/awslabs/s2n/tree/main/tests/ctverif). However, even there, it is only used to verify two functions that together have less than 100 lines of code.
-- **Tool available:** <https://github.com/imdea-software/verifying-constant-time> ![GitHub last commit](https://img.shields.io/github/last-commit/imdea-software/verifying-constant-time)![GitHub contributors](https://img.shields.io/github/contributors/imdea-software/verifying-constant-time)![GitHub Repo stars](https://img.shields.io/github/stars/imdea-software/verifying-constant-time)
 
 ### CT-WASM
 
