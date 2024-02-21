@@ -39,7 +39,7 @@ can be useful for testing constant-timeness verification tools, or learning how 
 {% assign examples = site.examples | sort_natural: "title" %}
 <ul>
 {% for example in examples %}
-	<li><a href="{{ example.url }}">{{ example.title }}.c</a> ({% if example.ct == "depends" %}depends{% elsif example.ct %}CT{% else %}non-CT{% endif %})</li>
+	<li><a href="{{ example.url | relative_url }}">{{ example.title }}.c</a> ({% if example.ct == "depends" %}depends{% elsif example.ct %}CT{% else %}non-CT{% endif %})</li>
 {% endfor %}
 </ul>
 ## Resources

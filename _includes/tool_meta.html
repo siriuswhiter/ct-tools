@@ -25,5 +25,10 @@
 		{% if include.tutorials and include.tutorials.size > 0 %}
 		<a href="{{ include.tutorials[0].url | relative_url }}"><button {% if include.which == "tutorial" %}class="inactive"{% endif %}>Tutorial page</button></a>
 		{% endif %}
+		{% capture script_name %}install_{{ include.tool.slug }}.sh{% endcapture %}
+		{% assign scripts = site.static_files | where_exp: "file", "file.name contains script_name" %}
+		{% if scripts and scripts.size > 0 %}
+		<a href="{{ scripts[0].path | relative_url }}"><button>Install script</button></a>
+		{% endif %}
 	</div>
 </div>

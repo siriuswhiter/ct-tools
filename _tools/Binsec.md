@@ -12,7 +12,7 @@ site: https://binsec.github.io/
 papers:
  - name: "BINSEC: Binary Code Analysis with Low-Level Regions"
    link: https://doi.org/10.1007/978-3-662-46681-0_17
- - name: "Binsec/rel: Efficient relational symbolic execution for constant-time at binary-level"
+ - name: "Binsec/Rel: Efficient relational symbolic execution for constant-time at binary-level"
    link: https://doi.org/10.1109/SP40000.2020.
 ---
 
