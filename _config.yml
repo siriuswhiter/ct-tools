@@ -3,6 +3,9 @@ collections:
   tools:
     output: true
     permalink: /:collection/:name
+  tutorials:
+    output: true
+    permalink: /:collection/:name
 defaults:
  - scope:
      path: ""
@@ -13,3 +16,8 @@ defaults:
      type: "tools"
    values:
      layout: "tools"
+ - scope:
+     path: ""
+     type: "tutorials"
+   values:
+     layout: "tutorials"

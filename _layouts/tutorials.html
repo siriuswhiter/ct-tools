@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% assign tutorials = page | sort %}
+{% assign tool = site.tools | where: "title", page.title | first %}
+
+<h2>Metadata</h2>
+{% include tool_meta.html tool=tool tutorials=tutorials which="tutorial" %}
+
+{{ content }}
+
+<hr/>
+Back to the <a href="{{ tool.url | relative_url }}"><b>Tool page</b></a>.
+

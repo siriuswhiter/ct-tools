@@ -18,15 +18,18 @@ Each tool has its own page with more information and resources, sometimes **even
 	<th>Target</th>
 	<th>Technique</th>
 	<th>Guarantees</th>
+	<th>Tutorial</th>
 </thead>
 {% assign tools = site.tools | sort_natural: "title" %}
 {% for tool in tools %}
+	{% assign tutorials = site.tutorials | where: "title", tool.title %}
 	<tr>
 		<td><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a></td>
 		<td>{{ tool.year }}</td>
 		<td>{{ tool.target }}</td>
 		<td>{{ tool.technique }}</td>
 		<td>{{ tool.guarantees }}</td>
+		<td>{% if tutorials and tutorials.size > 0 %}<a href="{{ tutorials[0].url | relative_url }}">yes</a>{% endif %}</td>
 	</tr>
 {% endfor %}
 </table>

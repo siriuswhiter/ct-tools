@@ -1,0 +1,29 @@
+<div id="tool-metadata">
+	<table>
+		<colgroup>
+			<col>
+			<col>
+		</colgroup>
+		<tr><th scope="row">Year</th><td>{{ include.tool.year }}</td></tr>
+		<tr><th scope="row">Target</th><td>{{ include.tool.target }}</td></tr>
+		<tr><th scope="row">Technique</th><td>{{ include.tool.technique }}</td></tr>
+		<tr><th scope="row">Guarantees</th><td>{{ include.tool.guarantees }}</td></tr>
+		<tr><th scope="row">Available</th><td>{% if include.tool.available %}<b style="color: green;">yes</b>{% else %}<b style="color: red;">no</b>{% endif %}</td></tr>
+		{% if include.tool.repo %}<tr><th scope="row">Repository</th><td><a href="{{ include.tool.repo }}">{{ include.tool.repo }}</a></td></tr>{% endif %}
+		{% if include.tool.site %}<tr><th scope="row">Website</th><td><a href="{{ include.tool.site }}">{{ include.tool.site }}</a></td></tr>{% endif %}
+		{% if include.tool.papers %}
+		{% for paper in include.tool.papers %}
+		<tr><th scope="row">Paper<sub>{{ forloop.index }}</sub></th><td><a href="{{ paper.link }}">{{ paper.name }}</a></td></tr>
+		{% endfor %}
+		{% endif %}
+		{% if include.tutorials and include.tutorials.size > 0 %}
+		<tr><th scope="row">Tutorial</th><td><a href="{{ include.tutorials[0].url | relative_url }}"><b>yes</b></a></td></tr>
+		{% endif %}
+	</table>
+	<div id="tool-links">
+		<a href="{{ include.tool.url | relative_url }}"><button {% if include.which == "tool" %}class="inactive"{% endif %}>Tool page</button></a>
+		{% if include.tutorials and include.tutorials.size > 0 %}
+		<a href="{{ include.tutorials[0].url | relative_url }}"><button {% if include.which == "tutorial" %}class="inactive"{% endif %}>Tutorial page</button></a>
+		{% endif %}
+	</div>
+</div>
