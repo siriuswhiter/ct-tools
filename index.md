@@ -31,10 +31,22 @@ Each tool has its own page with more information and resources, sometimes **even
 {% endfor %}
 </table>
 
+## Examples
+
+The following list constains short snippets of C code that exhibit constant-time (or not) behavior and
+can be useful for testing constant-timeness verification tools, or learning how to use them.
+
+{% assign examples = site.examples | sort_natural: "title" %}
+<ul>
+{% for example in examples %}
+	<li><a href="{{ example.url }}">{{ example.title }}.c</a> ({% if example.ct == "depends" %}depends{% elsif example.ct %}CT{% else %}non-CT{% endif %})</li>
+{% endfor %}
+</ul>
 ## Resources
 
 - <https://neuromancer.sk/article/26>
 - <https://crocs.fi.muni.cz/public/papers/usablect_sp22>
+- <https://neuromancer.sk/article/29>
 
 <hr/>
 <img src="assets/img/oprah.jpg" alt="Oprah giving everyone a tool" style="display: block; margin-left: auto; margin-right: auto;"/>

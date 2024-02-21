@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% if page.ct == "depends" %}
+The following code may or may not compile to a constant-time binary.
+{% else %}
+The following code is {% unless page.ct %}<b>not</b>{% endunless %} constant-time.
+{% endif %}
+
+<br/><br/>
+
+{{ content }}

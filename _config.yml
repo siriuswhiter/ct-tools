@@ -6,6 +6,9 @@ collections:
   tutorials:
     output: true
     permalink: /:collection/:name
+  examples:
+    output: true
+    permalink: /:collection/:name
 defaults:
  - scope:
      path: ""
@@ -21,3 +24,8 @@ defaults:
      type: "tutorials"
    values:
      layout: "tutorials"
+ - scope:
+     path: ""
+     type: "examples"
+   values:
+     layout: "examples"
