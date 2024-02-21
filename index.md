@@ -6,9 +6,6 @@ This page lists tools for testing and verification of constant-timeness of progr
 The table is based mostly on the work in [*“They’re not that hard to mitigate”: What Cryptographic Library Developers Think About Timing Attacks*](https://crocs.fi.muni.cz/public/papers/usablect_sp22) with addition of more tools. 
 Each tool has its own page with more information and resources, sometimes **even a tutorial on using the tool**.
 
-<img src="assets/img/oprah.jpg" alt="Oprah giving everyone a tool" style="display: block; margin-left: auto; margin-right: auto;"/>
-
-
 ## Tools
 
 <table>
@@ -38,3 +35,6 @@ Each tool has its own page with more information and resources, sometimes **even
 
 - <https://neuromancer.sk/article/26>
 - <https://crocs.fi.muni.cz/public/papers/usablect_sp22>
+
+<hr/>
+<img src="assets/img/oprah.jpg" alt="Oprah giving everyone a tool" style="display: block; margin-left: auto; margin-right: auto;"/>
