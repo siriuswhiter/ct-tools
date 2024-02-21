@@ -2,7 +2,7 @@
 slug: memsan
 name: MemSan
 description: "LLVM MemorySanitizer"
-year: -
+year: "-"
 target: LLVM IR
 technique: Dynamic
 guarantees: "sound with restrictions"
