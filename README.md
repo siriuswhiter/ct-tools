@@ -29,11 +29,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 
 | Name                                    | Year | Target  | Technique   | Guarantees              |
 | --------------------------------------- | ---- | ------- | ----------- | ----------------------- |
-| [CT-WASM](#ct-wasm)                     | 2019 | WASM    | Formal      | sound                   |
-| [DATA](#data)                           | 2018 | Binary  | Dynamic     | sound with restrictions |
-| [dudect](#dudect)                       | 2017 | Binary  | Statistical | no                      |
-| [ENCIDER](#encider)                     | 2022 | LLVM    | Symbolic    | sound with restrictions |
-| [ENCoVer](#encover)                     | 2012 | Java    | Formal      | sound                   |
 | [FaCT](#fact)                           | 2019 | DSL     | Formal      | sound                   |
 | [FlowTracker](#flowtracker)             | 2016 | LLVM IR | Formal      | sound                   |
 | [haybale-pitchfork](#haybale-pitchfork) | 2019 | LLVM IR | Symbolic    | sound with restrictions |
@@ -52,34 +47,6 @@ The table is based mostly on the work in [*“They’re not that hard to mitigat
 | [TriggerFlow](#triggerflow)             | 2018 | Binary  | Dynamic     | no                      |
 | [VirtualCert](#virtualcert)             | 2014 | x86     | Formal      | sound                   |
 
-
-### CT-WASM
-
-- Introduced in “CT-WASM: type-driven secure cryptography for the web ecosystem” by C. Watt, J. Renner, N. Popescu, S. Cauligi, and D. Stefan; <https://doi.org/10.1145/3290390>
-- **Tool available:** <https://github.com/PLSysSec/ct-wasm> ![GitHub last commit](https://img.shields.io/github/last-commit/PLSysSec/ct-wasm)![GitHub contributors](https://img.shields.io/github/contributors/PLSysSec/ct-wasm)![GitHub Repo stars](https://img.shields.io/github/stars/PLSysSec/ct-wasm)
-
-### DATA
-
-- Introduced in “DATA - differential address trace analysis: Finding address-based side-channels in binaries” by S. Weiser, A. Zankl, R. Spreitzer, K. Miller, S. Mangard, and G. Sigl; <https://www.usenix.org/conference/usenixsecurity18/presentation/weiser>
-- Used in “Big numbers - big troubles: Systematically analyzing nonce leakage in (EC)DSA implementations” by S. Weiser, D. Schrammel, L. Bodner, and R. Spreitzer; <https://www.usenix.org/conference/usenixsecurity20/presentation/weiser>
-- **DATA** (Differential Address Trace Analysis) is a tool quite similar to the **Microwalk** framework in that it is a dynamic tool that records memory-accesses of the target into address traces as it processes random secret inputs. The traces are then aligned and analyzed using generic and specific leakage tests. The tool reports the location of leakage and even offers a graphical user interface for analysis.
-- **Tool available:** <https://github.com/Fraunhofer-AISEC/DATA> ![GitHub last commit](https://img.shields.io/github/last-commit/Fraunhofer-AISEC/DATA)![GitHub contributors](https://img.shields.io/github/contributors/Fraunhofer-AISEC/DATA)![GitHub Repo stars](https://img.shields.io/github/stars/Fraunhofer-AISEC/DATA)
-
-### dudect
-
-- Introduced in “Dude, is my code constant time?” by O. Reparaz, J. Balasch, and I. Verbauwhede; <https://doi.org/10.23919/DATE.2017.7927267>
-- **dudect** is a dynamic tool that uses leakage assessment techniques from physical (power and EM) side-channel analysis, namely test-vector leakage assessment (TVLA). It first runs the target using two classes of secret input data with varying public input data and measures the duration of execution for each run. It then applies a test to the two distributions of the duration of execution for the two classes (either Welch's t-test for equality of means or Kolmogorov-Smirnov test for equality of distributions), and if the distributions differ, leakage is reported. This is analogous to how leakage assessment is used in power side-channel attacks, in that instead of comparing distributions of power consumption at points during the execution of the target, the runtime distributions are compared.
-- **Tool available:** <https://github.com/oreparaz/dudect> ![GitHub last commit](https://img.shields.io/github/last-commit/oreparaz/dudect)![GitHub contributors](https://img.shields.io/github/contributors/oreparaz/dudect)![GitHub Repo stars](https://img.shields.io/github/stars/oreparaz/dudect)
-
-### ENCIDER
-
-- Introduced in “ENCIDER: Detecting Timing and Cache Side Channels in SGX Enclaves and Cryptographic APIs” by Tuba Yavuz, Farhaan Fowze, Grant Hernandez, Ken Yihang Bai, Kevin Butler, and Dave Jing Tian; <https://ieeexplore.ieee.org/abstract/document/9737388>
-- **Tool available:** <https://github.com/sysrel/ENCIDER>
-
-### ENCoVer
-
-- Introduced in “ENCoVer: Symbolic exploration for information flow security” by M. Balliu, M. Dam, and G. L. Guernic; <https://doi.org/10.1109/CSF.2012.24>
-- **Tool available:**  <https://people.kth.se/~musard/files/encover.html>
 
 ### FaCT
 
